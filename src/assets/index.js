@@ -1,3 +1,4 @@
+import arrowRight from "../assets/images/Arrow-Right.png";
 import brand from "../assets/images/Brand-74x74.png";
 import call from "../assets/images/Call.png";
 import email from "../assets/images/Email.png";
@@ -16,6 +17,7 @@ import send from "../assets/images/Send.png";
 import twitter from "../assets/images/Twitter.png";
 
 export {
+  arrowRight,
   brand,
   call,
   email,

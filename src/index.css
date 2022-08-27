@@ -18,6 +18,15 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.hover-gradient-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
 /* Light Start */
 .hero-left-white-light {
   position: fixed;

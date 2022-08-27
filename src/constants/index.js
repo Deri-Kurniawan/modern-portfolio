@@ -15,23 +15,23 @@ import {
 export const navLinks = [
   {
     label: "Home",
-    path: "/#home",
+    url: "/#home",
   },
   {
     label: "Ability",
-    path: "/#ability",
+    url: "/#ability",
   },
   {
     label: "Projects",
-    path: "/#projects",
+    url: "/#projects",
   },
   {
     label: "Education",
-    path: "/#education",
+    url: "/#education",
   },
   {
-    label: "Contact",
-    path: "/#contacs",
+    label: "Contacts",
+    url: "/#contacts",
   },
 ];
 
@@ -52,17 +52,17 @@ export const stats = [
 
 export const abilities = [
   {
-    title: "React JS",
+    name: "React JS",
     icon: react,
     description: "I've been made over 20 apps using React JS library",
   },
   {
-    title: "React Native",
+    name: "React Native",
     icon: react,
     description: "I've been made over 10 apps using React Native",
   },
   {
-    title: "React Native",
+    name: "React Native",
     icon: send,
     description:
       "A balance transfer credit card can save you a lot of money in interest charges.",
@@ -71,12 +71,12 @@ export const abilities = [
 
 export const educations = [
   {
-    title: "state elementary school 1 of cimapag",
+    title: "State Elementary School 1 of Cimapag",
     description: "Lorem ipsum dolor sit amet consecture",
     yearRange: "2007 - 2013",
   },
   {
-    title: "state high school 1 of cireunghas",
+    title: "State High School 1 of Cireunghas",
     description: "Lorem ipsum dolor sit amet consecture",
     yearRange: "2013 - 2016",
   },
@@ -86,7 +86,7 @@ export const educations = [
     yearRange: "2016 - 2019",
   },
   {
-    title: "Muhammadiyah University Of Sukabumi",
+    title: "Muhammadiyah University of Sukabumi",
     description: "Lorem ipsum dolor sit amet consecture",
     yearRange: "2019 - Now",
   },
@@ -97,97 +97,110 @@ export const educations = [
 
 export const feedbacks = [
   {
-    name: "Vanesa",
-    position: "Founder & Leader",
+    name: "John Doe",
+    position: "Project Manager",
     avatar: reviewer1,
     review:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
+      "Deri Kurniawan is a very competent person in the field of multiplatform applications.",
   },
   {
-    name: "Steve Mark",
+    name: "Vanessa Angela",
     position: "Backend Developer",
     avatar: reviewer2,
     review:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+      "Deri Kurniawan is a very professional person and has helped me complete a project owned by the company.",
   },
   {
     name: "Kenn Gallanger",
-    position: "Fullstack Developer",
+    position: "CEO & Founder",
     avatar: reviewer3,
     review:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
+      "There can be no doubt about this Deri's ability. I am very happy to be able to use his services.",
   },
 ];
 
 export const contacts = [
   {
-    title: "Email",
+    label: "Email",
     icon: email,
     description: "deri.netuchi@gmail.com",
-    link: "mailto: deri.netuchi@gmail.com",
+    url: "mailto: deri.netuchi@gmail.com",
   },
   {
-    title: "WhatsApp",
+    label: "WhatsApp",
     icon: call,
     description: "+62-857-2095-9031",
-    link: "https://wa.me/6285720959031",
+    url: "https://wa.me/6285720959031",
   },
   {
-    title: "Telegram",
+    label: "Telegram",
     icon: send,
     description: "@Deri_Kurniawan",
-    link: "https://t.me/Deri_Kurniawan",
+    url: "https://t.me/Deri_Kurniawan",
   },
 ];
 
 export const footer = [
   {
-    title: "Pages",
-    links: [
+    label: "Pages",
+    urls: [
       {
-        title: "Home",
-        link: "/#home",
+        label: "Home",
+        url: "/#home",
       },
       {
-        title: "Ability",
-        link: "/#ability",
+        label: "Ability",
+        url: "/#ability",
       },
       {
-        title: "Projects",
-        link: "/#projects",
+        label: "Projects",
+        url: "/#projects",
       },
       {
         educations: "Education",
-        link: "/#education",
+        url: "/#education",
       },
       {
-        title: "Contact",
-        link: "/#contact",
+        label: "Contact",
+        url: "/#contact",
       },
     ],
   },
   {
-    title: "Social Media",
-    links: [
+    label: "Social Media",
+    urls: [
       {
-        title: "LinkedIn",
-        link: "https://www.linkedin.com/in/deri-kurniawan/",
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/deri-kurniawan/",
       },
       {
-        title: "Instagram",
-        link: "https://www.instagram.com/deri561/",
+        label: "Instagram",
+        url: "https://www.instagram.com/deri561/",
       },
       {
-        title: "Twitter",
-        link: "https://twitter.com/derii561",
+        label: "Twitter",
+        url: "https://twitter.com/derii561",
       },
       {
-        title: "Facebook",
-        link: "https://www.facebook.com/raniku2014",
+        label: "Facebook",
+        url: "https://www.facebook.com/raniku2014",
       },
       {
-        title: "Dev",
-        link: "https://dev.to/deri_kurniawan",
+        label: "Dev",
+        url: "https://dev.to/deri_kurniawan",
+      },
+    ],
+  },
+  {
+    label: "Support Us",
+    urls: [
+      {
+        label: "Buy Me A Coffee",
+        url: "https://www.buymeacoffee.com/derikurniawan",
+      },
+      {
+        label: "PayPal",
+        url: "https://www.paypal.com/paypalme/my/profile",
       },
     ],
   },
@@ -195,23 +208,23 @@ export const footer = [
 
 export const socialMedia = [
   {
-    title: "Instagram",
+    label: "Instagram",
     icon: instagram,
-    link: "https://www.instagram.com/deri561/",
+    url: "https://www.instagram.com/deri561/",
   },
   {
-    title: "Facebook",
+    label: "Facebook",
     icon: facebook,
-    link: "https://www.facebook.com/raniku2014",
+    url: "https://www.facebook.com/raniku2014",
   },
   {
-    title: "Twitter",
+    label: "Twitter",
     icon: twitter,
-    link: "https://twitter.com/derii561",
+    url: "https://twitter.com/derii561",
   },
   {
-    title: "LinkedIn",
+    label: "LinkedIn",
     icon: linkedin,
-    link: "https://www.linkedin.com/in/deri-kurniawan/",
+    url: "https://www.linkedin.com/in/deri-kurniawan/",
   },
 ];

@@ -6,5 +6,16 @@ import Project from "./Project";
 import Education from "./Education";
 import Contacts from "./Contacts";
 import Footer from "./Footer";
+import Button from "./Button";
 
-export { Navbar, Hero, Ability, Stats, Project, Education, Contacts, Footer };
+export {
+  Navbar,
+  Hero,
+  Ability,
+  Stats,
+  Project,
+  Education,
+  Contacts,
+  Footer,
+  Button,
+};
