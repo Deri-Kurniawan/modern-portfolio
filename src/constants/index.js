@@ -1,17 +1,69 @@
+import {
+  call,
+  email,
+  facebook,
+  instagram,
+  linkedin,
+  react,
+  reviewer1,
+  reviewer2,
+  reviewer3,
+  send,
+  twitter,
+} from "../assets";
+
+export const navLinks = [
+  {
+    label: "Home",
+    path: "/#home",
+  },
+  {
+    label: "Ability",
+    path: "/#ability",
+  },
+  {
+    label: "Projects",
+    path: "/#projects",
+  },
+  {
+    label: "Education",
+    path: "/#education",
+  },
+  {
+    label: "Contact",
+    path: "/#contacs",
+  },
+];
+
+export const stats = [
+  {
+    label: "Projects",
+    value: 50,
+  },
+  {
+    label: "Trusted By Client",
+    value: 15,
+  },
+  {
+    label: "Total Client",
+    value: 20,
+  },
+];
+
 export const abilities = [
   {
     title: "React JS",
-    icon: require("../assets/images/React.png"),
+    icon: react,
     description: "I've been made over 20 apps using React JS library",
   },
   {
     title: "React Native",
-    icon: require("../assets/images/React.png"),
+    icon: react,
     description: "I've been made over 10 apps using React Native",
   },
   {
     title: "React Native",
-    icon: require("../assets/images/Send.png"),
+    icon: send,
     description:
       "A balance transfer credit card can save you a lot of money in interest charges.",
   },
@@ -47,21 +99,21 @@ export const feedbacks = [
   {
     name: "Vanesa",
     position: "Founder & Leader",
-    avatar: require("../assets/images/Reviewer-1.png"),
+    avatar: reviewer1,
     review:
       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
   },
   {
     name: "Steve Mark",
     position: "Backend Developer",
-    avatar: require("../assets/images/Reviewer-2.png"),
+    avatar: reviewer2,
     review:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
   },
   {
     name: "Kenn Gallanger",
     position: "Fullstack Developer",
-    avatar: require("../assets/images/Reviewer-3.png"),
+    avatar: reviewer3,
     review:
       "It is usually people in the money business, finance, and international trade that are really rich.",
   },
@@ -70,19 +122,19 @@ export const feedbacks = [
 export const contacts = [
   {
     title: "Email",
-    icon: require("../assets/images/Email.png"),
+    icon: email,
     description: "deri.netuchi@gmail.com",
     link: "mailto: deri.netuchi@gmail.com",
   },
   {
     title: "WhatsApp",
-    icon: require("../assets/images/Call.png"),
+    icon: call,
     description: "+62-857-2095-9031",
     link: "https://wa.me/6285720959031",
   },
   {
     title: "Telegram",
-    icon: require("../assets/images/Send.png"),
+    icon: send,
     description: "@Deri_Kurniawan",
     link: "https://t.me/Deri_Kurniawan",
   },
@@ -144,22 +196,22 @@ export const footer = [
 export const socialMedia = [
   {
     title: "Instagram",
-    icon: require("../assets/images/Instagram.png"),
+    icon: instagram,
     link: "https://www.instagram.com/deri561/",
   },
   {
     title: "Facebook",
-    icon: require("../assets/images/Facebook.png"),
+    icon: facebook,
     link: "https://www.facebook.com/raniku2014",
   },
   {
     title: "Twitter",
-    icon: require("../assets/images/Twitter.png"),
+    icon: twitter,
     link: "https://twitter.com/derii561",
   },
   {
     title: "LinkedIn",
-    icon: require("../assets/images/LinkedIn.png"),
+    icon: linkedin,
     link: "https://www.linkedin.com/in/deri-kurniawan/",
   },
 ];
