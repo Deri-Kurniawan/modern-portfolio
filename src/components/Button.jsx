@@ -15,7 +15,11 @@ const Button = ({
     <div className="flex flex-row justify-center items-center">
       <span>{title}</span>
       {showIcon == true && (
-        <img className="w-[24px] h-[24px]" src={arrowRight} alt="arrow_right" />
+        <img
+          className="w-[24px] h-[24px] object-contain"
+          src={arrowRight}
+          alt="arrow_right"
+        />
       )}
     </div>
   </button>

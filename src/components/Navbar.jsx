@@ -35,13 +35,21 @@ const Navbar = () => {
   return (
     <nav>
       <div className="h-[74px] flex flex-row justify-between items-center">
-        <a href="/">
-          <img
-            className="w-[48px] h-[48px] lg:w-[74px] lg:h-[74px] z-[0]"
-            src={brand}
-            alt="brand_logo"
-          />
-        </a>
+        <button
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+            })
+          }
+        >
+          <h1 aria-label="Deri Kurniawan Brand Logo">
+            <img
+              className="w-[48px] h-[48px] lg:w-[74px] lg:h-[74px] z-[0] object-contain"
+              src={brand}
+              alt="brand_logo"
+            />
+          </h1>
+        </button>
         <ul className="hidden lg:flex flex-row justify-end items-center list-none">
           {navLinks.map((nav, index) => (
             <li
@@ -61,10 +69,14 @@ const Navbar = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? (
-            <img className="w-[25px] h-[25px]" src={close} alt="close_menu" />
+            <img
+              className="w-[25px] h-[25px] object-contain"
+              src={close}
+              alt="close_menu"
+            />
           ) : (
             <img
-              className="w-[40px] h-[18px]"
+              className="w-[40px] h-[18px] object-contain"
               src={hamburger}
               alt="toggle_button"
             />

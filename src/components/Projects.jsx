@@ -34,7 +34,7 @@ const Projects = () => {
             </button>
             <div className="relative">
               <img
-                className="flex justify-center z-[1]"
+                className="flex justify-center z-[1] object-contain"
                 src={projectData.image}
                 alt="project_image"
               />
@@ -73,7 +73,15 @@ const Projects = () => {
           <p className="text-[18px] text-dimWhite mt-6">
             {projectData.description}
           </p>
-          <Button title="See More Project" />
+          <Button
+            title="See More Project"
+            clickHandle={() => {
+              window.open(
+                "https://github.com/Deri-Kurniawan?tab=repositories",
+                "_blank"
+              );
+            }}
+          />
         </div>
       </div>
     </section>

@@ -6,15 +6,18 @@ const Contacts = () => (
     <div className="flex flex-col-reverse lg:flex-row">
       <div className="flex flex-1 flex-col pt-[30px] lg:pt-0">
         <div className="lg:pr-12">
-          {contacts.map(({ label, icon, description }, index) => (
-            <div
+          {contacts.map(({ label, icon, description, url }, index) => (
+            <a
               key={index}
+              href={url}
+              target="_blank"
+              rel="noreferrer noopener"
               className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
             >
               <div className="mr-[20px]">
                 <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
                   <img
-                    className="w-[42px] h-[42px]"
+                    className="w-[42px] h-[42px] object-contain"
                     src={icon}
                     alt={`${label}_icon`}
                   />
@@ -22,9 +25,11 @@ const Contacts = () => (
               </div>
               <div className="flex flex-col justify-end">
                 <h4>{label}</h4>
-                <p className="text-dimWhite mt-2">{description}</p>
+                <p className="text-dimWhite mt-2 hover:text-secondary">
+                  {description}
+                </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -23,11 +23,15 @@ const Feedback = () => (
           key={index}
           className="flex flex-1 flex-col p-[40px] rounded-[20px] hover-gradient-card"
         >
-          <img className="w-[44px] h-[26px]" src={quote} alt="quote_mark" />
+          <img
+            className="w-[44px] h-[26px] object-contain"
+            src={quote}
+            alt="quote_mark"
+          />
           <p className="py-10">{review}</p>
           <div className="flex flex-row justify-start items-center">
             <img
-              className="w-[46px] h-[46px]"
+              className="w-[46px] h-[46px] object-contain"
               src={avatar}
               alt={`${name}_avatar`}
             />

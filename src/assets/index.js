@@ -15,6 +15,7 @@ import reviewer1 from "../assets/images/Reviewer-1.png";
 import reviewer2 from "../assets/images/Reviewer-2.png";
 import reviewer3 from "../assets/images/Reviewer-3.png";
 import send from "../assets/images/Send.png";
+import tailwindCSS from "../assets/images/Tailwind-CSS.png";
 import twitter from "../assets/images/Twitter.png";
 
 import projectsImages from "../assets/images/projects";
@@ -37,6 +38,7 @@ export {
   reviewer2,
   reviewer3,
   send,
+  tailwindCSS,
   twitter,
   projectsImages,
 };

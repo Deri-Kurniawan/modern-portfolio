@@ -12,7 +12,7 @@ const Hero = () => (
         <span className="text-gradient">Full Stack Developer</span>
       </h1>
       <img
-        className="pt-[45px] lg:pt-0 w-[219px] h-[222] lg:w-[421px] lg:h-[426px] z-[1]"
+        className="pt-[45px] lg:pt-0 w-[219px] h-[222] lg:w-[421px] lg:h-[426px] z-[1] object-contain"
         src={person}
         alt="person_hero"
       />

@@ -1,26 +1,16 @@
 import {
   call,
   email,
-  facebook,
-  github,
-  instagram,
-  linkedin,
   projectsImages,
   react,
   reviewer1,
   reviewer2,
   reviewer3,
   send,
-  twitter,
+  tailwindCSS,
 } from "../assets";
 
-import {
-  FiInstagram,
-  FiTwitter,
-  FiLinkedin,
-  FiFacebook,
-  FiGithub,
-} from "react-icons/fi";
+import { FiInstagram, FiTwitter, FiLinkedin, FiGithub } from "react-icons/fi";
 
 export const navLinks = [
   {
@@ -69,18 +59,17 @@ export const abilities = [
   {
     name: "React JS",
     icon: react,
-    description: "I've been made over 20 apps using React JS library",
+    description: "I've been made over 20 apps using React JS.",
   },
   {
     name: "React Native",
     icon: react,
-    description: "I've been made over 10 apps using React Native",
+    description: "I've been made over 10 apps using React Native.",
   },
   {
-    name: "React Native",
-    icon: send,
-    description:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    name: "Tailwindcss",
+    icon: tailwindCSS,
+    description: "I've been made over 5 apps using Tailwindcss.",
   },
 ];
 
@@ -91,7 +80,11 @@ export const projects = [
     description: (
       <>
         Windows 11 OS clone as website using React JS checkout this live site on{" "}
-        <a className="text-secondary" href="https://deri-kurniawan.vercel.app">
+        <a
+          className="text-secondary"
+          href="https://deri-kurniawan.vercel.app"
+          rel="noreferrer noopener"
+        >
           vercel
         </a>
       </>
@@ -99,43 +92,96 @@ export const projects = [
   },
   {
     name: "Other Example Projects",
-    image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
-    description: (
-      <>
-        lorem ipsum dolor sit amet{" "}
-        <a className="text-secondary" href="https://deri-kurniawan.vercel.app">
-          vercel
-        </a>{" "}
-        2
-      </>
-    ),
+    image: projectsImages.project1,
+    description:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam",
   },
 ];
 
 export const educations = [
   {
-    title: "State Elementary School 1 of Cimapag",
-    description: "Lorem ipsum dolor sit amet consecture",
-    yearRange: "2007 - 2013",
+    title: "Public Elementary School 1 of Cimapag",
+    description: (
+      <ul className="list-disc ml-5">
+        <li>
+          <a
+            className="hover:text-secondary"
+            href="https://www.google.com/search?q=pramuka"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Praja Muda Karana (Scouting)
+          </a>
+        </li>
+      </ul>
+    ),
+    timeRange: "2007 - 2013",
+    url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/203e7f0f-2cf5-e011-8cdd-479651f9753d",
   },
   {
-    title: "State High School 1 of Cireunghas",
-    description: "Lorem ipsum dolor sit amet consecture",
-    yearRange: "2013 - 2016",
+    title: "Public Junior School 1 of Cireunghas",
+    description: (
+      <ul className="list-disc ml-5">
+        <li>
+          <a
+            className="hover:text-secondary"
+            href="https://www.google.com/search?q=palang+merah+remaja"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Palang Merah Remaja (Medical Extracurricular)
+          </a>
+        </li>
+      </ul>
+    ),
+    timeRange: "2013 - 2016",
+    url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/709329fd-3202-e211-ba24-8d6c1ba56eba",
   },
   {
-    title: "State High School 4 of Sukabumi",
-    description: "Lorem ipsum dolor sit amet consecture",
-    yearRange: "2016 - 2019",
+    title: "Public Senior High School 4 of Sukabumi",
+    description: (
+      <ul className="list-disc ml-5">
+        <li>
+          <a
+            className="hover:text-secondary"
+            href="https://www.google.com/search?q=organisasi+siswa"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Organisasi Siswa - IT Division (Student Organization)
+          </a>
+        </li>
+        <li>IT Club (Tech Extracurricular)</li>
+        <li>Delta Music (Music Extracurricular)</li>
+      </ul>
+    ),
+    timeRange: "2016 - 2019",
+    url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/9fbbd74e-dbd5-43b2-9d82-d40d727dd64c",
   },
   {
     title: "Muhammadiyah University of Sukabumi",
-    description: "Lorem ipsum dolor sit amet consecture",
-    yearRange: "2019 - Now",
+    description: (
+      <>
+        <ul className="list-disc ml-5">
+          <li>
+            <a
+              className="hover:text-secondary"
+              href="http://drive.google.com/uc?export=view&id=1q0ERTFZFvh0cVuczbXmRhNrrBHMNVt7v"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Studi Independen Kampus Merdeka Batch 1 <br /> (23 Aug 2021 - 19
+              Jan 2022)
+            </a>
+          </li>
+        </ul>
+      </>
+    ),
+    timeRange: "2019 - Now",
+    url: "https://pddikti.kemdikbud.go.id/data_pt/NTFCMjg4QzItQTE2Mi00MTkwLUI1NjYtNDUwODlEQThCMUUy",
   },
   {
-    yearRange: "Future",
+    timeRange: "Future",
   },
 ];
 
