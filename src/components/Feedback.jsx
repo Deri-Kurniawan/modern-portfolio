@@ -6,7 +6,7 @@ const Feedback = () => (
   <section id="feedback" className="py-[140px]">
     <div className="flex flex-row">
       <div className="flex flex-1">
-        <h2 className="font-semibold text-[48px] text-white">
+        <h2 className="font-semibold text-[48px]">
           What People Are Saying About Us
         </h2>
       </div>
@@ -24,7 +24,7 @@ const Feedback = () => (
           className="flex flex-1 flex-col p-[40px] rounded-[20px] hover-gradient-card"
         >
           <img className="w-[44px] h-[26px]" src={quote} alt="quote_mark" />
-          <p className="py-10 text-white">{review}</p>
+          <p className="py-10">{review}</p>
           <div className="flex flex-row justify-start items-center">
             <img
               className="w-[46px] h-[46px]"
@@ -32,7 +32,7 @@ const Feedback = () => (
               alt={`${name}_avatar`}
             />
             <div className="flex flex-col ml-3">
-              <h4 className="text-white">{name}</h4>
+              <h4>{name}</h4>
               <p className="text-dimWhite text-sm">{position}</p>
             </div>
           </div>

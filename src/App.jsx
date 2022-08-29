@@ -4,12 +4,12 @@ import {
   Hero,
   Ability,
   Stats,
-  Project,
   Education,
   Contacts,
   Footer,
 } from "./components";
 import Feedback from "./components/Feedback";
+import Projects from "./components/Projects";
 import "./lights.css";
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="font-poppins bg-primary">
+    <div className="xl:max-w-[1280px] xl:m-auto w-full font-poppins bg-primary text-white">
       <div ref={navbarContainerRef} className={`sticky top-0 z-50 px-[106px]`}>
         <Navbar />
       </div>
@@ -45,15 +45,15 @@ const App = () => {
         <Hero />
         <Stats />
         <Ability />
-        <Project />
+        <Projects />
         <Education />
         <Feedback />
         <Contacts />
         <Footer />
-        <div className="light1" />
+        {/* <div className="light1" />
         <div className="light2" />
         <div className="light3" />
-        <div className="light4" />
+        <div className="light4" /> */}
       </div>
     </div>
   );

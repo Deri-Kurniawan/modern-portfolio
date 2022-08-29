@@ -19,11 +19,16 @@ const Footer = () => (
       </div>
       {footer.map(({ label, urls }, index) => (
         <div key={index}>
-          <h5 className="text-[18px] text-white">{label}</h5>
+          <h5 className="text-[18px]">{label}</h5>
           <ul className="flex flex-col mt-6">
             {urls.map(({ label, url }, index) => (
               <li key={index} className="text-[16px] text-dimWhite pb-1">
-                <a className="hover:text-secondary" href={url}>
+                <a
+                  className="hover:text-secondary"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {label}
                 </a>
               </li>
@@ -33,7 +38,7 @@ const Footer = () => (
       ))}
     </div>
     <div className="flex flex-row justify-between items-center border-t-[1px] border-white mt-10">
-      <p className="text-white py-5">
+      <p className="py-5">
         Copyright &copy; {new Date().getFullYear()} Deri Kurniawan. All Rights
         Reserved.
       </p>
@@ -45,6 +50,8 @@ const Footer = () => (
             className={`${
               socialMedia.length - 1 === index ? "mr-0" : "mr-[30px]"
             }`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={social.icon} alt={`${social.label}_icon`} />
           </a>

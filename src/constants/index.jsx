@@ -4,6 +4,7 @@ import {
   facebook,
   instagram,
   linkedin,
+  projectsImages,
   react,
   reviewer1,
   reviewer2,
@@ -71,6 +72,35 @@ export const abilities = [
     icon: send,
     description:
       "A balance transfer credit card can save you a lot of money in interest charges.",
+  },
+];
+
+export const projects = [
+  {
+    name: "Windows 11 OS Clone Web",
+    image: projectsImages.project1,
+    description: (
+      <>
+        Windows 11 OS clone as website using React JS checkout this live site on{" "}
+        <a className="text-secondary" href="https://deri-kurniawan.vercel.app">
+          vercel
+        </a>
+      </>
+    ),
+  },
+  {
+    name: "Other Example Projects",
+    image:
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+    description: (
+      <>
+        lorem ipsum dolor sit amet{" "}
+        <a className="text-secondary" href="https://deri-kurniawan.vercel.app">
+          vercel
+        </a>{" "}
+        2
+      </>
+    ),
   },
 ];
 
@@ -162,12 +192,12 @@ export const footer = [
         url: "/#projects",
       },
       {
-        educations: "Education",
+        label: "Education",
         url: "/#education",
       },
       {
-        label: "Contact",
-        url: "/#contact",
+        label: "Contacts",
+        url: "/#contacts",
       },
     ],
   },

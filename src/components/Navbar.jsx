@@ -10,9 +10,10 @@ const Navbar = () => {
     const sections = document.querySelectorAll("section");
     const handleScrollSpy = (e, sections) => {
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const offsetY = 200;
+        const sectionTop = section.offsetTop - offsetY;
         const sectionHeight = section.offsetHeight;
-        const sectionBottom = sectionTop + sectionHeight;
+        const sectionBottom = sectionTop + sectionHeight - offsetY;
         const isInView = scrollY >= sectionTop && scrollY <= sectionBottom;
 
         if (isInView) {
@@ -41,7 +42,7 @@ const Navbar = () => {
               className={`${
                 nav.id === sectionIsInViewId
                   ? "text-secondary"
-                  : "text-white hover:text-secondary"
+                  : "hover:text-secondary"
               } transition-all ease-linear duration-200 ml-[60px]`}
             >
               <a href={nav.url}>{nav.label}</a>

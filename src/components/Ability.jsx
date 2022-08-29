@@ -6,7 +6,7 @@ const Ability = () => (
   <section id="ability" className="py-[140px]">
     <div className="flex flex-row">
       <div className="flex flex-1 flex-col">
-        <h2 className="font-semibold text-[48px] text-white">
+        <h2 className="font-semibold text-[48px]">
           The Abilities I have and The Most Tools I Use
         </h2>
         <p className=" text-dimWhite mt-6">
@@ -32,7 +32,7 @@ const Ability = () => (
                 </div>
               </div>
               <div className="flex flex-col justify-end">
-                <h4 className="text-white">{name}</h4>
+                <h4>{name}</h4>
                 <p className="text-dimWhite mt-2">{description}</p>
               </div>
             </div>

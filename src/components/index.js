@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Ability from "./Ability";
 import Stats from "./Stats";
-import Project from "./Project";
+import Projects from "./Projects";
 import Education from "./Education";
 import Contacts from "./Contacts";
 import Footer from "./Footer";
@@ -13,7 +13,7 @@ export {
   Hero,
   Ability,
   Stats,
-  Project,
+  Projects,
   Education,
   Contacts,
   Footer,

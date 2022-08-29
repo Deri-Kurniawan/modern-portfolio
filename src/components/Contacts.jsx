@@ -22,7 +22,7 @@ const Contacts = () => (
                 </div>
               </div>
               <div className="flex flex-col justify-end">
-                <h4 className="text-white">{label}</h4>
+                <h4>{label}</h4>
                 <p className="text-dimWhite mt-2">{description}</p>
               </div>
             </div>
@@ -30,7 +30,7 @@ const Contacts = () => (
         </div>
       </div>
       <div className="flex flex-1 flex-col">
-        <h2 className="font-semibold text-[48px] text-white">Contact Us</h2>
+        <h2 className="font-semibold text-[48px]">Contact Us</h2>
         <p className="text-dimWhite mt-6">
           While we're good with smoke signals, there are simpler ways for us to
           get in touch and answer your question.

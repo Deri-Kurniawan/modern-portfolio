@@ -4,7 +4,7 @@ import { person } from "../assets";
 const Hero = () => (
   <section id="home" className="py-[140px]">
     <div className="flex flex-row justify-between items-center">
-      <h1 className="font-semibold text-[62px] text-white">
+      <h1 className="font-semibold text-[62px]">
         I’m <span className="text-gradient">Deri Kurniawan</span>
         <br />
         A Passionate
