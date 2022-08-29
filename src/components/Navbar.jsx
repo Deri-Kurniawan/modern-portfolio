@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { brand } from "../assets";
+import { brand, close, hamburger } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [sectionIsInViewId, setSectionIsInViewId] = useState("home");
 
   useEffect(() => {
@@ -33,9 +34,15 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex flex-row justify-between items-center">
-        <img className="z-[0]" src={brand} alt="brand_logo" />
-        <ul className="flex flex-row justify-end items-center list-none">
+      <div className="h-[74px] flex flex-row justify-between items-center">
+        <a href="/">
+          <img
+            className="w-[48px] h-[48px] lg:w-[74px] lg:h-[74px] z-[0]"
+            src={brand}
+            alt="brand_logo"
+          />
+        </a>
+        <ul className="hidden lg:flex flex-row justify-end items-center list-none">
           {navLinks.map((nav, index) => (
             <li
               key={index}
@@ -49,6 +56,43 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <button
+          className="lg:hidden block"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          {isOpen ? (
+            <img className="w-[25px] h-[25px]" src={close} alt="close_menu" />
+          ) : (
+            <img
+              className="w-[40px] h-[18px]"
+              src={hamburger}
+              alt="toggle_button"
+            />
+          )}
+        </button>
+
+        <div
+          className={`${
+            isOpen ? "flex justify-center items-center" : "hidden"
+          } absolute lg:hidden py-4 bg-black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+        >
+          <ul className="flex flex-col justify-center items-center list-none">
+            {navLinks.map((nav, index) => (
+              <li
+                key={index}
+                className={`${
+                  nav.id === sectionIsInViewId
+                    ? "text-secondary"
+                    : "hover:text-secondary"
+                } ${
+                  navLinks.length - 1 !== index && "pb-4"
+                } transition-all ease-linear duration-200`}
+              >
+                <a href={nav.url}>{nav.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

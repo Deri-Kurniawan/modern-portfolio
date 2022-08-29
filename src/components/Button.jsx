@@ -8,7 +8,7 @@ const Button = ({
   clickHandle = () => null,
 }) => (
   <button
-    className={`relative ${style} text-black h-[64px] w-[180px] bg-blue-gradient font-medium text-[16px] rounded-[10px]`}
+    className={`relative ${style} text-black h-[54px] w-[190px] lg:h-[64px] lg:w-[200px] bg-blue-gradient font-medium text-[15px] lg:text-[18px] rounded-[10px]`}
     type="button"
     onClick={clickHandle}
   >

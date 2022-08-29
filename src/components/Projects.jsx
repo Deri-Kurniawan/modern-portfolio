@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { BsCircle, BsCircleFill } from "react-icons/bs";
 import { projects as projectsData } from "../constants";
 
 const Projects = () => {
@@ -9,10 +8,13 @@ const Projects = () => {
   const [projectData, setProjectData] = useState(projectsData[0]);
 
   return (
-    <section id="projects" className="py-[140px]">
-      <div className="flex flex-row">
+    <section id="projects" className="py-[30px] lg:py-[140px]">
+      <div className="flex flex-col lg:flex-row">
         <div>
-          <div className="flex flex-1 items-center justify-start">
+          <h2 className="block lg:hidden font-semibold text-[28px] lg:text-[48px] pb-[30px]">
+            Recent Projects
+          </h2>
+          <div className="flex flex-1 items-center justify-start max-w-full lg:max-w-[600px]">
             <button
               className="flex flex-col justify-center items-center text-2xl h-full px-2"
               onClick={() =>
@@ -32,7 +34,7 @@ const Projects = () => {
             </button>
             <div className="relative">
               <img
-                className="z-[1] max-w-[550px]"
+                className="flex justify-center z-[1]"
                 src={projectData.image}
                 alt="project_image"
               />
@@ -61,10 +63,16 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col ml-[50px]">
-          <h2 className="font-semibold text-[48px]">Projects</h2>
-          <h2 className="mt-6 text-[28px]">{projectData.name}</h2>
-          <p className="text-dimWhite mt-6">{projectData.description}</p>
+        <div className="flex flex-1 flex-col pt-[30px] lg:pt-0 lg:ml-[50px]">
+          <h2 className="hidden lg:block font-semibold text-[48px]">
+            Recent Projects
+          </h2>
+          <h2 className="mt-6 text-[24px] lg:text-[28px]">
+            {projectData.name}
+          </h2>
+          <p className="text-[18px] text-dimWhite mt-6">
+            {projectData.description}
+          </p>
           <Button title="See More Project" />
         </div>
       </div>

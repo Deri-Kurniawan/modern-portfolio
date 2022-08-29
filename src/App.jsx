@@ -38,10 +38,13 @@ const App = () => {
 
   return (
     <div className="xl:max-w-[1280px] xl:m-auto w-full font-poppins bg-primary text-white">
-      <div ref={navbarContainerRef} className={`sticky top-0 z-50 px-[106px]`}>
+      <div
+        ref={navbarContainerRef}
+        className={`sticky top-0 z-50 px-[30px] lg:px-[106px]`}
+      >
         <Navbar />
       </div>
-      <div className="px-[106px] xl:max-w-[1280px] xl:m-auto w-full">
+      <div className="px-[30px] lg:px-[106px] xl:max-w-[1280px] xl:m-auto w-full">
         <Hero />
         <Stats />
         <Ability />

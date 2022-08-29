@@ -1,8 +1,10 @@
 import arrowRight from "../assets/images/Arrow-Right.png";
 import brand from "../assets/images/Brand-74x74.png";
 import call from "../assets/images/Call.png";
+import close from "../assets/images/Close.png";
 import email from "../assets/images/Email.png";
 import facebook from "../assets/images/Facebook.png";
+import github from "../assets/images/Github.png";
 import hamburger from "../assets/images/Hamburger.png";
 import instagram from "../assets/images/Instagram.png";
 import linkedin from "../assets/images/LinkedIn.png";
@@ -21,8 +23,10 @@ export {
   arrowRight,
   brand,
   call,
+  close,
   email,
   facebook,
+  github,
   hamburger,
   instagram,
   linkedin,

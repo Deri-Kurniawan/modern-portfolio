@@ -3,46 +3,54 @@ import { brand } from "../assets";
 import { footer, socialMedia } from "../constants";
 
 const Footer = () => (
-  <footer className="pt-[140px]">
-    <div className="flex flex-row flex-wrap justify-between">
-      <div className="flex flex-col">
+  <footer className="pt-[80px] lg:pt-[140px]">
+    <div className="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
+      <div className="flex-1 flex flex-col justify-start items-start mr-10">
         <img
-          className="relative w-[74px] h-[74px]"
           src={brand}
           alt="brand_logo"
+          className="w-[48] h-[48px] lg:w-[74px] lg:h-[74px] object-contain"
         />
-        <p className="text-dimWhite mt-[18px]">
-          If opportunity does not come to you, then create it.
-          <br />
-          Life about finding not waiting without effort.
+        <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] mt-4 max-w-[310px]">
+          If you do something that makes you lose track of time. Rest assured
+          that's your ninja way.
         </p>
       </div>
-      {footer.map(({ label, urls }, index) => (
-        <div key={index}>
-          <h5 className="text-[18px]">{label}</h5>
-          <ul className="flex flex-col mt-6">
-            {urls.map(({ label, url }, index) => (
-              <li key={index} className="text-[16px] text-dimWhite pb-1">
-                <a
-                  className="hover:text-secondary"
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+      <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
+        {footer.map(({ label, urls }) => (
+          <div key={label} className="flex flex-col ss:my-0 my-4 min-w-[150px]">
+            <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
+              {label}
+            </h4>
+            <ul className="list-none mt-4">
+              {urls.map(({ label, url, blank }, index) => (
+                <li
+                  key={label}
+                  className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                    index !== url.length - 1 ? "mb-4" : "mb-0"
+                  }`}
                 >
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+                  <a
+                    href={url}
+                    target={blank ? "_blank" : "_self"}
+                    rel="noreferrer noopener"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="flex flex-row justify-between items-center border-t-[1px] border-white mt-10">
-      <p className="py-5">
+
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-center border-t-[1px] border-white mt-[30px] lg:mt-10">
+      <p className="py-5 text-center text-[15px] lg:text-[18px]">
         Copyright &copy; {new Date().getFullYear()} Deri Kurniawan. All Rights
         Reserved.
       </p>
-      <div className="flex flex-row justify-end flex-1">
+      <div className="flex flex-row justify-end flex-1 py-[20px] lg:py-0">
         {socialMedia.map((social, index) => (
           <a
             key={index}
@@ -53,7 +61,9 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={social.icon} alt={`${social.label}_icon`} />
+            <div className="text-[21px] hover:text-secondary">
+              {social.icon}
+            </div>
           </a>
         ))}
       </div>

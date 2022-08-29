@@ -2,6 +2,7 @@ import {
   call,
   email,
   facebook,
+  github,
   instagram,
   linkedin,
   projectsImages,
@@ -12,6 +13,14 @@ import {
   send,
   twitter,
 } from "../assets";
+
+import {
+  FiInstagram,
+  FiTwitter,
+  FiLinkedin,
+  FiFacebook,
+  FiGithub,
+} from "react-icons/fi";
 
 export const navLinks = [
   {
@@ -182,47 +191,77 @@ export const footer = [
       {
         label: "Home",
         url: "/#home",
+        blank: false,
+      },
+      {
+        label: "Stats",
+        url: "/#stats",
+        blank: false,
       },
       {
         label: "Ability",
         url: "/#ability",
+        blank: false,
       },
       {
         label: "Projects",
         url: "/#projects",
+        blank: false,
       },
       {
         label: "Education",
         url: "/#education",
+        blank: false,
+      },
+      {
+        label: "Feedback",
+        url: "/#feedback",
+        blank: false,
       },
       {
         label: "Contacts",
         url: "/#contacts",
+        blank: false,
       },
     ],
   },
   {
-    label: "Social Media",
+    label: "Blogs & Social",
     urls: [
+      {
+        label: "Stack Overflow",
+        url: "https://stackoverflow.com/users/19716588/deri-kurniawan",
+        blank: true,
+      },
+      {
+        label: "Github",
+        url: "https://github.com/deri-kurniawan/",
+        blank: true,
+      },
       {
         label: "LinkedIn",
         url: "https://www.linkedin.com/in/deri-kurniawan/",
+        blank: true,
       },
       {
         label: "Instagram",
         url: "https://www.instagram.com/deri561/",
+        blank: true,
       },
       {
         label: "Twitter",
         url: "https://twitter.com/derii561",
+        blank: true,
       },
       {
-        label: "Facebook",
-        url: "https://www.facebook.com/raniku2014",
+        label: "Medium",
+        url: "https://deri-kurniawan.medium.com",
+        blank: true,
       },
       {
-        label: "Dev",
+        label: "DEV",
         url: "https://dev.to/deri_kurniawan",
+        blank: true,
       },
     ],
   },
@@ -232,10 +271,17 @@ export const footer = [
       {
         label: "Buy Me A Coffee",
         url: "https://www.buymeacoffee.com/derikurniawan",
+        blank: true,
       },
       {
         label: "PayPal",
-        url: "https://www.paypal.com/paypalme/my/profile",
+        url: "https://paypal.me/derikurniawan5?country.x=ID&locale.x=en_US",
+        blank: true,
+      },
+      {
+        label: "Ko-fi",
+        url: "https://ko-fi.com/derikurniawan",
+        blank: true,
       },
     ],
   },
@@ -244,22 +290,22 @@ export const footer = [
 export const socialMedia = [
   {
     label: "Instagram",
-    icon: instagram,
+    icon: <FiInstagram />,
     url: "https://www.instagram.com/deri561/",
   },
   {
-    label: "Facebook",
-    icon: facebook,
-    url: "https://www.facebook.com/raniku2014",
-  },
-  {
     label: "Twitter",
-    icon: twitter,
+    icon: <FiTwitter />,
     url: "https://twitter.com/derii561",
   },
   {
     label: "LinkedIn",
-    icon: linkedin,
+    icon: <FiLinkedin />,
     url: "https://www.linkedin.com/in/deri-kurniawan/",
+  },
+  {
+    label: "Github",
+    icon: <FiGithub />,
+    url: "https://github.com/deri-kurniawan/",
   },
 ];

@@ -3,19 +3,23 @@ import { educations } from "../constants";
 import Button from "./Button";
 
 const Education = () => (
-  <section id="education" className="py-[140px]">
-    <div className="flex flex-row">
+  <section id="education" className="py-[80px] lg:py-[140px]">
+    <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1 flex-col">
-        <h2 className="font-semibold text-[48px]">My Formal Educations</h2>
-        <p className="text-dimWhite mt-6">
+        <h2 className="font-semibold text-[28px] lg:text-[48px]">
+          My Formal Educations
+        </h2>
+        <p className="text-[18px] text-dimWhite mt-6">
           They are the places where I can reach my path to become a developer.
         </p>
-        <p className="text-dimWhite mt-6">
+        <p className="hidden lg:block text-[18px] text-dimWhite mt-6">
           Take a look my non-formal education with certificate on linkedin.
         </p>
-        <Button title="Show More" />
+        <div className="hidden lg:block">
+          <Button title="Show More" />
+        </div>
       </div>
-      <div className="flex flex-1 ml-[111px]">
+      <div className="flex flex-1 pt-[30px] lg:pt-0 lg:ml-[111px]">
         {/* timeline start */}
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
           {educations.map(({ yearRange, title, description }, index) => (
@@ -41,6 +45,12 @@ const Education = () => (
           ))}
         </ol>
         {/* timeline end */}
+      </div>
+      <p className="block lg:hidden text-[18px] mt-[30px] lg:mt-6 text-dimWhite">
+        Take a look my non-formal education with certificate on linkedin.
+      </p>
+      <div className="block lg:hidden">
+        <Button title="Show More" />
       </div>
     </div>
   </section>
