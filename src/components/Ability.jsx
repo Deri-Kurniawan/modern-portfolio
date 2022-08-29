@@ -6,10 +6,10 @@ const Ability = () => (
   <section id="ability" className="py-[140px]">
     <div className="flex flex-row">
       <div className="flex flex-1 flex-col">
-        <h2 className="font-poppins font-semibold text-[48px] text-white">
+        <h2 className="font-semibold text-[48px] text-white">
           The Abilities I have and The Most Tools I Use
         </h2>
-        <p className="font-poppins text-dimWhite mt-6">
+        <p className=" text-dimWhite mt-6">
           With my abilities that I have, I believe that I can give the best to
           what you need
         </p>
@@ -31,7 +31,7 @@ const Ability = () => (
                   />
                 </div>
               </div>
-              <div className="flex flex-col justify-end font-poppins">
+              <div className="flex flex-col justify-end">
                 <h4 className="text-white">{name}</h4>
                 <p className="text-dimWhite mt-2">{description}</p>
               </div>

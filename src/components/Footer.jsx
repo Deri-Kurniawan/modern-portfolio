@@ -11,7 +11,7 @@ const Footer = () => (
           src={brand}
           alt="brand_logo"
         />
-        <p className="font-poppins text-dimWhite mt-[18px]">
+        <p className="text-dimWhite mt-[18px]">
           If opportunity does not come to you, then create it.
           <br />
           Life about finding not waiting without effort.
@@ -23,7 +23,9 @@ const Footer = () => (
           <ul className="flex flex-col mt-6">
             {urls.map(({ label, url }, index) => (
               <li key={index} className="text-[16px] text-dimWhite pb-1">
-                <a href={url}>{label}</a>
+                <a className="hover:text-secondary" href={url}>
+                  {label}
+                </a>
               </li>
             ))}
           </ul>
@@ -31,7 +33,7 @@ const Footer = () => (
       ))}
     </div>
     <div className="flex flex-row justify-between items-center border-t-[1px] border-white mt-10">
-      <p className="font-poppins text-white py-5">
+      <p className="text-white py-5">
         Copyright &copy; {new Date().getFullYear()} Deri Kurniawan. All Rights
         Reserved.
       </p>

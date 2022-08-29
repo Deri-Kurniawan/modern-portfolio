@@ -6,13 +6,13 @@ const Education = () => (
   <section id="education" className="py-[140px]">
     <div className="flex flex-row">
       <div className="flex flex-1 flex-col">
-        <h2 className="font-poppins font-semibold text-[48px] text-white">
+        <h2 className="font-semibold text-[48px] text-white">
           My Formal Educations
         </h2>
-        <p className="font-poppins text-dimWhite mt-6">
+        <p className="text-dimWhite mt-6">
           They are the places where I can reach my path to become a developer.
         </p>
-        <p className="font-poppins text-dimWhite mt-6">
+        <p className="text-dimWhite mt-6">
           Take a look my non-formal education with certificate on linkedin.
         </p>
         <Button title="Show More" />
@@ -23,18 +23,16 @@ const Education = () => (
           {educations.map(({ yearRange, title, description }, index) => (
             <li key={index} className="mb-7 ml-4">
               <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white" />
-              <time className="mb-1 text-sm font-poppins font-medium leading-none text-gray-400">
+              <time className="mb-1 text-sm font-medium leading-none text-gray-400">
                 {yearRange}
               </time>
 
               {title && (
-                <h3 className="font-poppins text-lg font-semibold text-white">
-                  {title}
-                </h3>
+                <h3 className="text-lg font-semibold text-white">{title}</h3>
               )}
 
               {description && (
-                <p className="font-poppins mb-4 text-base font-normal text-dimWhite">
+                <p className="mb-4 text-base font-normal text-dimWhite">
                   {description}
                 </p>
               )}

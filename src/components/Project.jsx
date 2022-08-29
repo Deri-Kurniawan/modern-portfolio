@@ -10,10 +10,10 @@ const Project = () => (
       </div>
 
       <div className="flex flex-1 flex-col ml-[111px]">
-        <h2 className="font-poppins font-semibold text-[48px] text-white">
+        <h2 className="font-semibold text-[48px] text-white">
           Windows 11 OS Clone Web
         </h2>
-        <p className="font-poppins text-dimWhite mt-6">
+        <p className="text-dimWhite mt-6">
           Windows 11 OS clone as website using React JS checkout this live site
           on vercel
         </p>

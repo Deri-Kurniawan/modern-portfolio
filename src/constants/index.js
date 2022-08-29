@@ -14,22 +14,27 @@ import {
 
 export const navLinks = [
   {
+    id: "home",
     label: "Home",
     url: "/#home",
   },
   {
+    id: "ability",
     label: "Ability",
     url: "/#ability",
   },
   {
+    id: "projects",
     label: "Projects",
     url: "/#projects",
   },
   {
+    id: "education",
     label: "Education",
     url: "/#education",
   },
   {
+    id: "contacts",
     label: "Contacts",
     url: "/#contacts",
   },
