@@ -7,11 +7,8 @@ const Contacts = () => (
       <div className="flex flex-1 flex-col pt-[30px] lg:pt-0">
         <div className="lg:pr-12">
           {contacts.map(({ label, icon, description, url }, index) => (
-            <a
+            <div
               key={index}
-              href={url}
-              target="_blank"
-              rel="noreferrer noopener"
               className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
             >
               <div className="mr-[20px]">
@@ -25,11 +22,16 @@ const Contacts = () => (
               </div>
               <div className="flex flex-col justify-end">
                 <h4>{label}</h4>
-                <p className="text-dimWhite mt-2 hover:text-secondary">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-dimWhite mt-2 hover:text-secondary"
+                >
                   {description}
-                </p>
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

@@ -33,7 +33,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav>
+    <nav className="px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
       <div className="h-[74px] flex flex-row justify-between items-center">
         <button
           onClick={() =>
@@ -50,7 +50,7 @@ const Navbar = () => {
             />
           </h1>
         </button>
-        <ul className="hidden lg:flex flex-row justify-end items-center list-none">
+        <ul className="hidden sm:flex flex-row justify-end items-center list-none">
           {navLinks.map((nav, index) => (
             <li
               key={index}
@@ -58,14 +58,14 @@ const Navbar = () => {
                 nav.id === sectionIsInViewId
                   ? "text-secondary"
                   : "hover:text-secondary"
-              } transition-all ease-linear duration-200 ml-[60px]`}
+              } transition-all ease-linear duration-200 ml-[60px] sm:ml-[50px]`}
             >
               <a href={nav.url}>{nav.label}</a>
             </li>
           ))}
         </ul>
         <button
-          className="lg:hidden block"
+          className="sm:hidden block"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? (
@@ -86,7 +86,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "flex justify-center items-center" : "hidden"
-          } absolute lg:hidden py-4 bg-black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } absolute sm:hidden py-4 bg-black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="flex flex-col justify-center items-center list-none">
             {navLinks.map((nav, index) => (

@@ -23,8 +23,7 @@ body {
 }
 
 .navbar-glass {
-  /*Generatedbyhttps:;
-  //css-glass.vercel.app/*/
+  /* Generatedbyhttps://css-glass.vercel.app/ */
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -51,32 +50,6 @@ body {
 .hover-gradient-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
-}
-
-/* Light Start */
-.hero-left-white-light {
-  position: fixed;
-  width: 195px;
-  height: 324px;
-  left: -97px;
-  top: 170px;
-  background: #ffffff;
-  filter: blur(250px);
-  -webkit-filter: blur(250px);
-}
-/* Light End */
-
-.hero-right-blue-light {
-  position: fixed;
-  width: 436.52px;
-  height: 544.07px;
-  left: 1350.85px;
-  top: -88px;
-  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
-  filter: blur(200px);
-  border-radius: 200px;
-  transform: rotate(47.46deg);
-  -webkit-filter: blur(200px);
 }
 
 .sidebar {
@@ -158,19 +131,4 @@ body {
     rgba(255, 255, 255, 0) -341.94%,
     #14101d 95.11%
   );
-}
-
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
-}
-
-.white__gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
 }

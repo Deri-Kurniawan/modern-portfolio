@@ -11,7 +11,7 @@ const Feedback = () => (
         </h2>
       </div>
       <div className="flex flex-1 lg:items-center pt-[30px] lg:pt-0">
-        <p className="text-[18px] text-dimWhite">
+        <p className="text-[18px] text-dimWhite z-10">
           Everything you need to build awesome design, mobile app, and web app,
           Rest API and more. I’ll do my best for it!
         </p>
@@ -21,7 +21,7 @@ const Feedback = () => (
       {feedbacks.map(({ avatar, name, position, review }, index) => (
         <div
           key={index}
-          className="flex flex-1 flex-col p-[40px] rounded-[20px] hover-gradient-card"
+          className="flex flex-1 flex-col p-[40px] rounded-[20px] hover-gradient-card z-10"
         >
           <img
             className="w-[44px] h-[26px] object-contain"

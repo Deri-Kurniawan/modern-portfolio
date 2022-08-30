@@ -22,30 +22,28 @@ const Ability = () => (
       </div>
       <div className="flex flex-1 flex-col pt-[30px] lg:pt-0 lg:pl-[60px]">
         <div>
-          {abilities.map(
-            ({ name, icon, description, customClass = "" }, index) => (
-              <div
-                key={index}
-                className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
-              >
-                <div className="mr-[20px]">
-                  <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
-                    <img
-                      className="w-[42px] h-[42px] object-contain"
-                      src={icon}
-                      alt={`${name}_icon`}
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col justify-end">
-                  <h4 className="text-[15px] lg:text-[18px]">{name}</h4>
-                  <p className="text-[13px] lg:text-[16px] text-dimWhite mt-2">
-                    {description}
-                  </p>
+          {abilities.map(({ name, icon, description }, index) => (
+            <div
+              key={index}
+              className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
+            >
+              <div className="mr-[20px]">
+                <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
+                  <img
+                    className="w-[42px] h-[42px] object-contain"
+                    src={icon}
+                    alt={`${name}_icon`}
+                  />
                 </div>
               </div>
-            )
-          )}
+              <div className="flex flex-col justify-end">
+                <h4 className="text-[15px] lg:text-[18px]">{name}</h4>
+                <p className="text-[13px] lg:text-[16px] text-dimWhite mt-2">
+                  {description}
+                </p>
+              </div>
+            </div>
+          ))}
           <div className="block lg:hidden">
             <Button
               title="Show More"

@@ -161,21 +161,19 @@ export const educations = [
   {
     title: "Muhammadiyah University of Sukabumi",
     description: (
-      <>
-        <ul className="list-disc ml-5">
-          <li>
-            <a
-              className="hover:text-secondary"
-              href="http://drive.google.com/uc?export=view&id=1q0ERTFZFvh0cVuczbXmRhNrrBHMNVt7v"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Studi Independen Kampus Merdeka Batch 1 <br /> (23 Aug 2021 - 19
-              Jan 2022)
-            </a>
-          </li>
-        </ul>
-      </>
+      <ul className="list-disc ml-5">
+        <li>
+          <a
+            className="hover:text-secondary"
+            href="http://drive.google.com/uc?export=view&id=1q0ERTFZFvh0cVuczbXmRhNrrBHMNVt7v"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Studi Independen Kampus Merdeka Batch 1 <br /> (23 Aug 2021 - 19 Jan
+            2022)
+          </a>
+        </li>
+      </ul>
     ),
     timeRange: "2019 - Now",
     url: "https://pddikti.kemdikbud.go.id/data_pt/NTFCMjg4QzItQTE2Mi00MTkwLUI1NjYtNDUwODlEQThCMUUy",
