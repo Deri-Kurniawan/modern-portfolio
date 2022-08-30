@@ -15,8 +15,6 @@ const App = () => {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
-    console.clear();
-
     const handleScroll = () => {
       if (scrollY === 0) {
         navbarContainerRef.current.classList.remove(

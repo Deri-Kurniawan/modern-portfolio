@@ -16,10 +16,11 @@
 
 * {
   scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .navbar-glass {

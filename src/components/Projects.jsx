@@ -7,6 +7,31 @@ const Projects = () => {
   const [indexPosition, setIndexPosition] = useState(0);
   const [projectData, setProjectData] = useState(projectsData[0]);
 
+  const handlePrev = () =>
+    setIndexPosition((prev) => {
+      const hasDecrementPrev = prev - 1;
+
+      if (hasDecrementPrev < 0) {
+        return 0;
+      }
+
+      setProjectData(projectsData[hasDecrementPrev]);
+      return hasDecrementPrev;
+    });
+
+  const handleNext = () =>
+    setIndexPosition((prev) => {
+      const hasIncrementPrev = prev + 1;
+      const projectIndex = projectsData.length - 1;
+
+      if (hasIncrementPrev > projectIndex) {
+        return projectIndex;
+      }
+
+      setProjectData(projectsData[hasIncrementPrev]);
+      return hasIncrementPrev;
+    });
+
   return (
     <section id="projects" className="py-[80px] lg:py-[140px]">
       <div className="flex flex-col lg:flex-row">
@@ -16,19 +41,9 @@ const Projects = () => {
           </h2>
           <div className="flex flex-1 items-center justify-center lg:justify-start max-w-full lg:max-w-[600px]">
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2"
-              onClick={() =>
-                setIndexPosition((prev) => {
-                  const hasDecrementPrev = prev - 1;
-
-                  if (hasDecrementPrev < 0) {
-                    return 0;
-                  }
-
-                  setProjectData(projectsData[hasDecrementPrev]);
-                  return hasDecrementPrev;
-                })
-              }
+              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30"
+              onClick={handlePrev}
+              disabled={indexPosition === 0}
             >
               <BiLeftArrow />
             </button>
@@ -43,20 +58,9 @@ const Projects = () => {
               </p>
             </div>
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2"
-              onClick={() =>
-                setIndexPosition((prev) => {
-                  const hasIncrementPrev = prev + 1;
-                  const projectIndex = projectsData.length - 1;
-
-                  if (hasIncrementPrev > projectIndex) {
-                    return projectIndex;
-                  }
-
-                  setProjectData(projectsData[hasIncrementPrev]);
-                  return hasIncrementPrev;
-                })
-              }
+              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30"
+              onClick={handleNext}
+              disabled={indexPosition === projectsData.length - 1}
             >
               <BiRightArrow />
             </button>
@@ -70,9 +74,9 @@ const Projects = () => {
           <h2 className="mt-6 text-[24px] lg:text-[28px]">
             {projectData.name}
           </h2>
-          <p className="text-[18px] text-dimWhite mt-6">
+          <div className="text-[18px] text-dimWhite mt-6">
             {projectData.description}
-          </p>
+          </div>
           <Button
             title="See More Project"
             clickHandle={() => {

@@ -12,6 +12,17 @@ import {
 
 import { FiInstagram, FiTwitter, FiLinkedin, FiGithub } from "react-icons/fi";
 
+const NewTabLink = ({ title, url, hover = true }) => (
+  <a
+    className={hover ? "hover:text-secondary" : "text-secondary"}
+    href={url}
+    target="_blank"
+    rel="noreferrer noopener"
+  >
+    {title}
+  </a>
+);
+
 export const navLinks = [
   {
     id: "home",
@@ -80,13 +91,11 @@ export const projects = [
     description: (
       <>
         Windows 11 OS clone as website using React JS checkout this live site on{" "}
-        <a
-          className="text-secondary"
-          href="https://deri-kurniawan.vercel.app"
-          rel="noreferrer noopener"
-        >
-          vercel
-        </a>
+        <NewTabLink
+          hover={false}
+          title="Vercel"
+          url="https://deri-kurniawan.vercel.app"
+        />
       </>
     ),
   },
@@ -102,18 +111,10 @@ export const educations = [
   {
     title: "Public Elementary School 1 of Cimapag",
     description: (
-      <ul className="list-disc ml-5">
-        <li>
-          <a
-            className="hover:text-secondary"
-            href="https://www.google.com/search?q=pramuka"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Praja Muda Karana (Scouting)
-          </a>
-        </li>
-      </ul>
+      <NewTabLink
+        title="- Praja Muda Karana (Scouting)"
+        url="https://www.google.com/search?q=pramuka"
+      />
     ),
     timeRange: "2007 - 2013",
     url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/203e7f0f-2cf5-e011-8cdd-479651f9753d",
@@ -121,18 +122,10 @@ export const educations = [
   {
     title: "Public Junior School 1 of Cireunghas",
     description: (
-      <ul className="list-disc ml-5">
-        <li>
-          <a
-            className="hover:text-secondary"
-            href="https://www.google.com/search?q=palang+merah+remaja"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Palang Merah Remaja (Medical Extracurricular)
-          </a>
-        </li>
-      </ul>
+      <NewTabLink
+        title="- Palang Merah Remaja (Medical Extracurricular)"
+        url="https://www.google.com/search?q=palang+merah+remaja"
+      />
     ),
     timeRange: "2013 - 2016",
     url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/709329fd-3202-e211-ba24-8d6c1ba56eba",
@@ -140,20 +133,15 @@ export const educations = [
   {
     title: "Public Senior High School 4 of Sukabumi",
     description: (
-      <ul className="list-disc ml-5">
-        <li>
-          <a
-            className="hover:text-secondary"
-            href="https://www.google.com/search?q=organisasi+siswa"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Organisasi Siswa - IT Division (Student Organization)
-          </a>
-        </li>
-        <li>IT Club (Tech Extracurricular)</li>
-        <li>Delta Music (Music Extracurricular)</li>
-      </ul>
+      <>
+        <NewTabLink
+          title="- Organisasi Siswa - IT Division (Student Organization)"
+          url="https://www.google.com/search?q=organisasi+siswa"
+        />
+        <br />
+        - Delta Music (Music Extracurricular)
+        <br />- IT Club (Tech Extracurricular)
+      </>
     ),
     timeRange: "2016 - 2019",
     url: "https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/9fbbd74e-dbd5-43b2-9d82-d40d727dd64c",
@@ -161,19 +149,11 @@ export const educations = [
   {
     title: "Muhammadiyah University of Sukabumi",
     description: (
-      <ul className="list-disc ml-5">
-        <li>
-          <a
-            className="hover:text-secondary"
-            href="http://drive.google.com/uc?export=view&id=1q0ERTFZFvh0cVuczbXmRhNrrBHMNVt7v"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Studi Independen Kampus Merdeka Batch 1 <br /> (23 Aug 2021 - 19 Jan
-            2022)
-          </a>
-        </li>
-      </ul>
+      <NewTabLink
+        title="- Studi Independen Kampus Merdeka Batch 1 (23 Aug 2021 - 19 Jan
+        2022)"
+        url="http://drive.google.com/uc?export=view&id=1q0ERTFZFvh0cVuczbXmRhNrrBHMNVt7v"
+      />
     ),
     timeRange: "2019 - Now",
     url: "https://pddikti.kemdikbud.go.id/data_pt/NTFCMjg4QzItQTE2Mi00MTkwLUI1NjYtNDUwODlEQThCMUUy",
