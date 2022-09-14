@@ -21,7 +21,7 @@ const Contacts = () => (
                 </div>
               </div>
               <div className="flex flex-col justify-end">
-                <h4>{label}</h4>
+                <h3>{label}</h3>
                 <a
                   href={url}
                   target="_blank"
@@ -36,9 +36,9 @@ const Contacts = () => (
         </div>
       </div>
       <div className="flex flex-1 flex-col">
-        <h2 className="font-semibold text-[28px] lg:text-[48px]">Contact Us</h2>
+        <h2 className="font-semibold text-[28px] lg:text-[48px]">Contact Me</h2>
         <p className="text-[18px] text-dimWhite mt-[30px] lg:mt-6">
-          While we're good with smoke signals, there are simpler ways for us to
+          While we're good with smoke signals, there are simpler ways for me to
           get in touch and answer your question.
         </p>
       </div>

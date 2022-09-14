@@ -7,3 +7,7 @@
 [![forks - portfolio](https://img.shields.io/github/forks/Deri-Kurniawan/portfolio?style=social)](https://github.com/Deri-Kurniawan/portfolio)
 
 Deployed at Vercel - [https://portfolio.deri-kurniawan.vercel.app](https://portfolio.deri-kurniawan.vercel.app)
+
+# Credits
+
+Special thanks to the givers of the sources listed on [CREDITS](https://github.com/Deri-Kurniawan/portfolio/blob/main/CREDITS.md)

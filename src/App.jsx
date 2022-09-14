@@ -52,11 +52,11 @@ const App = () => {
           <Feedback />
           <Contacts />
           <Footer />
-          <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] bg-white  z-[0]" />
-          <div className="absolute w-[82.5px] h-[162px] -left-[1000px] top-[170px] blur-[280px] bg-secondary  z-[0]" />
+          <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
+          <div className="absolute w-[82.5px] h-[162px] lg:-left-[1000px] lg:top-[170px] -right-[50px] top-[200px] blur-[150px] lg:blur-[280px] bg-secondary  z-[0]" />
           <div className="absolute w-[436.52px] h-[544.07px] left-[1000px] -top-[29px] blur-[300px] rounded-[200px] rotate-[47.46deg] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] z-0" />
-          <div className="absolute w-[405px] h-[471px] left-[257.09px] top-[1825.18px] bg-white/[0.6] blur-[370px] rotate-[176.62deg] z-[0]" />
-          <div className="absolute w-[436.52px] h-[544.07px] left-[1100px] top-[3200px] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] blur-[300px] rounded-[200px] rotate-[47.46deg] z-0" />
+          <div className="absolute w-[405px] h-[471px] -left-[300px] top-[1600px] lg:left-[257.09px] lg:top-[1825.18px] lg:bg-white/[0.6] bg-white/[0.3] blur-[500px] lg:blur-[370px] rotate-[176.62deg] z-[0]" />
+          <div className="absolute w-[436.52px] h-[544.07px] -right-[400px] top-[4000px] lg:left-[1100px] lg:top-[3200px] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] blur-[370px] rounded-[200px] rotate-[47.46deg] z-0" />
         </div>
       </div>
     </div>

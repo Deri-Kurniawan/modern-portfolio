@@ -10,17 +10,17 @@ const Stats = () => (
           className="flex flex-row flex-wrap items-center justify-start sm:justify-center"
         >
           <div className="flex flex-row justify-between items-center">
-            <h4 className="font-semibold text-[20px] ss:text-[25px] lg:text-[40px]">
+            <span className="font-semibold text-[20px] ss:text-[25px] lg:text-[40px]">
               {value}
-            </h4>
+            </span>
             {/* px-[25px] lg:px-[50px] */}
-            <p
+            <h2
               className={`font-normal text-[15px] ss:[17px] lg:text-[20px] text-gradient px-[25px] lg:pl-[50px] ${
                 index !== stats.length - 1 && "md:pr-[100px]"
               } uppercase`}
             >
               {label}
-            </p>
+            </h2>
             {index !== stats.length - 1 && (
               <div className="text-dimWhite hidden md:block">|</div>
             )}

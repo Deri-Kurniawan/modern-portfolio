@@ -35,31 +35,43 @@ const Projects = () => {
   return (
     <section id="projects" className="py-[80px] lg:py-[140px]">
       <div className="flex flex-col lg:flex-row">
-        <div>
-          <h2 className="block lg:hidden font-semibold text-[28px] lg:text-[48px] pb-[30px]">
-            Recent Projects
-          </h2>
-          <div className="flex flex-1 items-center justify-center lg:justify-start max-w-full lg:max-w-[600px]">
+        <h2 className="block lg:hidden font-semibold text-[28px] lg:text-[48px] pb-[30px]">
+          Recent Projects
+        </h2>
+        <div className="flex flex-1">
+          <div className="flex items-center justify-center lg:justify-start max-w-full lg:max-w-[600px]">
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30"
+              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30 z-10"
               onClick={handlePrev}
+              title={
+                indexPosition !== projectsData.length + 1
+                  ? "Previous Project"
+                  : "No More Project"
+              }
               disabled={indexPosition === 0}
             >
               <BiLeftArrow />
             </button>
             <div className="relative">
               <img
-                className="flex justify-center object-contain z-10"
+                className="flex justify-center w-full object-contain z-10"
                 src={projectData.image}
-                alt="project_image"
+                alt={`project_image_${indexPosition + 1}`}
+                width="100%"
+                height="100%"
               />
-              <p className="absolute top-2 right-2 text-center bg-primary px-2 py-1 rounded-md z-10">
+              <p className="absolute top-3 right-4 text-center px-2 py-1 bg-primary rounded-md z-10">
                 {indexPosition + 1}/{projectsData.length}
               </p>
             </div>
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30"
+              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30 z-10"
               onClick={handleNext}
+              title={
+                indexPosition !== projectsData.length - 1
+                  ? "Next Project"
+                  : "No More Project"
+              }
               disabled={indexPosition === projectsData.length - 1}
             >
               <BiRightArrow />

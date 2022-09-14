@@ -27,9 +27,9 @@ const Footer = () => (
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
         {footer.map(({ label, urls }, index) => (
           <div key={index} className="flex flex-col ss:my-0 my-4 min-w-[150px]">
-            <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
+            <h3 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
               {label}
-            </h4>
+            </h3>
             <ul className="list-none mt-4">
               {urls.map(({ label, url, blank }, index) => (
                 <li
@@ -62,16 +62,21 @@ const Footer = () => (
         {socialMedia.map((social, index) => (
           <a
             key={index}
-            href={social.url}
             className={`${
               socialMedia.length - 1 === index ? "mr-0" : "mr-[30px]"
             }`}
+            href={social.url}
             target="_blank"
             rel="noopener noreferrer"
+            title={`${social.label}${
+              social.label !== "Credits" ? ` (${social.username})` : ""
+            }`}
           >
-            <div className="text-[21px] hover:text-secondary">
-              {social.icon}
-            </div>
+            <img
+              className="w-[24px] h-[24px] object-contain"
+              src={social.icon}
+              alt={`${social.label}_icon`}
+            />
           </a>
         ))}
       </div>

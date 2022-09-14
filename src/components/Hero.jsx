@@ -1,5 +1,5 @@
 import React from "react";
-import { person } from "../assets";
+import { hero } from "../assets";
 
 const Hero = () => (
   <section
@@ -18,9 +18,11 @@ const Hero = () => (
       </div>
       <div className="flex justify-center lg:items-end lg:justify-end">
         <img
-          className="pt-[45px] lg:pt-0 w-[219px] h-[222] ss:w-[271px] ss:h-[276px] sm:w-[379px] sm:h-[382px] lg:w-[421px] lg:h-[426px] z-[1] object-contain"
-          src={person}
-          alt="person_hero"
+          className="pt-[45px] lg:pt-0 w-[219px] h-[222px] ss:w-[271px] ss:h-[276px] sm:w-[379px] sm:h-[382px] lg:w-[421px] lg:h-[426px] z-[1] object-contain"
+          src={hero}
+          alt="deri-kurniawan_person_hero"
+          width={219}
+          height={222}
         />
       </div>
     </div>

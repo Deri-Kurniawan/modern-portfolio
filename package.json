@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "daisyui": "^2.25.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0"
@@ -20,6 +21,7 @@
     "@vitejs/plugin-react": "^2.0.1",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
+    "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.1.8",
     "vite": "^3.0.7"
   }

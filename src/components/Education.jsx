@@ -10,10 +10,11 @@ const Education = () => (
           My Formal Educations
         </h2>
         <p className="text-[18px] text-dimWhite mt-6">
-          They are the places where I can reach my path to become a developer.
+          They are the places where I can reach my path to become a software
+          developer.
         </p>
         <p className="hidden lg:block text-[18px] text-dimWhite mt-6">
-          Take a look my non-formal education with certificate on LinkedIn.
+          Take a look my non-formal education with certificate on my LinkedIn.
         </p>
         <div className="hidden lg:block">
           <Button
