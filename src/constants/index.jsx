@@ -407,6 +407,6 @@ export const socialMedia = [
   {
     label: "Credits",
     icon: "https://img.icons8.com/color/344/document--v2.png",
-    url: "https://github.com/Deri-Kurniawan/portfolio/blob/main/CREDITS.md",
+    url: "https://github.com/Deri-Kurniawan/portfolio/blob/master/CREDITS.md",
   },
 ];
