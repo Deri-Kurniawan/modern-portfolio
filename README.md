@@ -10,4 +10,4 @@ Deployed at Vercel - [https://portfolio.deri-kurniawan.vercel.app](https://portf
 
 # Credits
 
-Special thanks to the givers of the sources listed on [CREDITS](https://github.com/Deri-Kurniawan/portfolio/blob/main/CREDITS.md)
+Special thanks to the givers of the sources listed on [CREDITS](https://github.com/Deri-Kurniawan/portfolio/blob/master/CREDITS.md)
