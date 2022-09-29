@@ -1,12 +1,10 @@
 import Image from "next/image";
-import React from "react";
 import { brand } from "../assets";
-import { footer, socialMedia } from "../constants";
 
 const Footer = ({ data }) => (
   <footer className="pt-[80px] lg:pt-[140px]">
-    <div className="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
-      <div className="flex-1 flex flex-col justify-start items-start mr-10">
+    <div className="flex flex-col items-start justify-center w-full mb-8 md:flex-row">
+      <div className="flex flex-col items-start justify-start flex-1 mr-10">
         <button
           onClick={() =>
             window.scrollTo({
@@ -26,16 +24,16 @@ const Footer = ({ data }) => (
         </button>
         <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] mt-4 ss:max-w-[90%] lg:max-w-[410px]">
           If you do something that makes you lose track of time. Rest assured
-          that's your ninja way.
+          that&apos;s your ninja way.
         </p>
       </div>
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
-        {data.map(({ label, urls }, index) => (
+        {data.links.map(({ label, urls }, index) => (
           <div key={index} className="flex flex-col ss:my-0 my-4 min-w-[150px]">
             <h3 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
               {label}
             </h3>
-            <ul className="list-none mt-4">
+            <ul className="mt-4 list-none">
               {urls.map(({ label, url, blank }, index) => (
                 <li
                   key={index}
@@ -64,11 +62,11 @@ const Footer = ({ data }) => (
         Reserved.
       </p>
       <div className="flex flex-row justify-end flex-1 py-[20px] lg:py-0">
-        {socialMedia.map((social, index) => (
+        {data.socialMedia.map((social, index) => (
           <a
             key={index}
             className={`${
-              socialMedia.length - 1 === index ? "mr-0" : "mr-[30px]"
+              data.socialMedia.length - 1 === index ? "mr-0" : "mr-[30px]"
             }`}
             href={social.url}
             target="_blank"

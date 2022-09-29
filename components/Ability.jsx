@@ -1,13 +1,11 @@
 import Image from "next/image";
-import React from "react";
-import { abilities } from "../constants";
 import ModalBox from "./ModalBox";
 import ModalToggler from "./ModalToggler";
 
 const Ability = ({ data }) => (
   <section id="ability" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-col flex-1">
         <h2 className="font-semibold text-[28px] lg:text-[48px]">
           The Abilities I have and The Most Often Tools I Use
         </h2>
@@ -53,27 +51,26 @@ const Ability = ({ data }) => (
       </div>
     </div>
 
-    {/* Modal */}
     <ModalBox
       id="abilitiesModal"
       width="w-11/12"
       styles="overflow-x-hidden md:scrollbar"
     >
-      <h3 className="text-center text-2xl md:text-4xl font-bold">
+      <h3 className="text-2xl font-bold text-center md:text-4xl">
         Language & Tools
       </h3>
-      <p className="text-center mt-2 ss:mt-3 md:5 lg:mt-6">
+      <p className="mt-2 text-center ss:mt-3 md:5 lg:mt-6">
         My Abilities Including The Most Often Language and Tools I Use
       </p>
-      <div className="mt-4 ss:mt-6 md:8 lg:mt-10 text-center">
-        <div className="grid grid-cols-2 ss:grid-cols-3 md:grid-cols-4 grid-flow-row gap-2 md:gap-3 lg:md:gap-4">
+      <div className="mt-4 text-center ss:mt-6 md:8 lg:mt-10">
+        <div className="grid grid-flow-row grid-cols-2 gap-2 ss:grid-cols-3 md:grid-cols-4 md:gap-3 lg:md:gap-4">
           {data.map(({ name, icon, description, inverted }, index) => (
             <div
               key={index}
               className="grid col-span-1 hover-gradient-card p-3 md:p-4 lg:p-5 rounded-[20px]"
               title={description}
             >
-              <div className="flex flex-col justify-start items-center">
+              <div className="flex flex-col items-center justify-start">
                 <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
                   <Image
                     className={`object-contain ${

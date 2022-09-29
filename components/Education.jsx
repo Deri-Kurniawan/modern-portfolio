@@ -1,12 +1,10 @@
-import React from "react";
-import { educations } from "../constants";
 import Button from "./Button";
 import parse from "html-react-parser";
 
 const Education = ({ data }) => (
   <section id="education" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-col flex-1">
         <h2 className="font-semibold text-[28px] lg:text-[48px]">
           My Formal Educations
         </h2>
@@ -30,7 +28,6 @@ const Education = ({ data }) => (
         </div>
       </div>
       <div className="flex flex-1 pt-[30px] lg:pt-0 lg:ml-[111px]">
-        {/* timeline start */}
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
           {data.map(({ timeRange, title, description, url }, index) => (
             <li
@@ -49,6 +46,7 @@ const Education = ({ data }) => (
                       className="hover:text-secondary"
                       href={url}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {title}
                     </a>
@@ -64,7 +62,6 @@ const Education = ({ data }) => (
             </li>
           ))}
         </ol>
-        {/* timeline end */}
       </div>
       <p className="block lg:hidden text-[18px] mt-[30px] lg:mt-6 text-dimWhite">
         Take a look my non-formal education with certificate on LinkedIn.

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import { contacts } from "../constants";
 
 const Contacts = ({ data }) => (
   <section id="contacts" className="py-[80px] lg:py-[140px]">
@@ -29,7 +27,7 @@ const Contacts = ({ data }) => (
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="text-dimWhite mt-2 hover:text-secondary"
+                  className="mt-2 text-dimWhite hover:text-secondary"
                 >
                   {description}
                 </a>
@@ -38,11 +36,11 @@ const Contacts = ({ data }) => (
           ))}
         </div>
       </div>
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-col flex-1">
         <h2 className="font-semibold text-[28px] lg:text-[48px]">Contact Me</h2>
         <p className="text-[18px] text-dimWhite mt-[30px] lg:mt-6">
-          While we're good with smoke signals, there are simpler ways for me to
-          get in touch and answer your question.
+          While we&apos;re good with smoke signals, there are simpler ways for
+          me to get in touch and answer your question.
         </p>
       </div>
     </div>

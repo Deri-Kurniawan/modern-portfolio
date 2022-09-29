@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    BASE_URL: "http://localhost:3000",
+    BASE_URL_DEV: "http://localhost:3000",
+    BASE_URL_PROD: "https://portfolio.deri-kurniawan.vercel.app",
   },
   reactStrictMode: true,
   swcMinify: true,

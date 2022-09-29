@@ -53,8 +53,8 @@ export default function Home({ data }) {
         <meta property="og:site_name" content="Deri Kurniawan Portfolio" />
         <title>Deri Kurniawan Portfolio</title>
       </Head>
-      <div className="relative overflow-hidden bg-primary font-poppins text-white">
-        <div ref={navbarContainerRef} className="fixed w-full top-0 z-50">
+      <div className="relative overflow-hidden text-white bg-primary font-poppins">
+        <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
           <div className="lg:max-w-[1440px] m-auto w-full">
             <Navbar data={data?.data?.navLinks} />
           </div>
@@ -68,7 +68,12 @@ export default function Home({ data }) {
             <Education data={data?.data?.educations} />
             <Feedback data={data?.data?.feedbacks} />
             <Contacts data={data?.data?.contacts} />
-            <Footer data={data?.data?.footer} />
+            <Footer
+              data={{
+                links: data?.data?.footer,
+                socialMedia: data?.data?.socialMedia,
+              }}
+            />
             <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
             <div className="absolute w-[82.5px] h-[162px] lg:-left-[1000px] lg:top-[170px] -right-[50px] top-[200px] blur-[150px] lg:blur-[280px] bg-secondary  z-[0]" />
             <div className="absolute w-[436.52px] h-[544.07px] left-[1000px] -top-[29px] blur-[300px] rounded-[200px] rotate-[47.46deg] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] z-0" />
@@ -82,7 +87,16 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(process.env.BASE_URL + "/api/data");
+  let url = process.env.BASE_URL_DEV;
+  if (process.env.NODE_ENV === "production") {
+    url = `${process.env.BASE_URL_PROD}/api/data`;
+  }
+
+  if (process.env.NODE_ENV === "development") {
+    url = `${process.env.BASE_URL_DEV}/api/data`;
+  }
+
+  const res = await fetch(url);
   const data = await res.json();
 
   return {

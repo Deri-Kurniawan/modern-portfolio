@@ -35,7 +35,7 @@ const Projects = ({ data }) => {
 
   useEffect(() => {
     setProjectData(data[indexPosition]);
-  }, []);
+  }, [data, indexPosition]);
 
   return (
     <section id="projects" className="py-[80px] lg:py-[140px]">
@@ -46,7 +46,7 @@ const Projects = ({ data }) => {
         <div className="flex flex-1">
           <div className="flex items-center justify-center lg:justify-start max-w-full lg:max-w-[600px]">
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30 z-10"
+              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:text-white/30"
               onClick={handlePrev}
               title={
                 indexPosition !== data?.length + 1
@@ -59,18 +59,18 @@ const Projects = ({ data }) => {
             </button>
             <div className="relative">
               <Image
-                className="object-contain z-10"
+                className="z-10 object-contain"
                 src={projectData?.image}
                 alt={`project_image_${indexPosition + 1}`}
                 width="624"
                 height="362"
               />
-              <p className="absolute top-3 right-4 text-center px-2 py-1 bg-primary rounded-md z-10">
+              <p className="absolute z-10 px-2 py-1 text-center rounded-md top-3 right-4 bg-primary">
                 {indexPosition + 1}/{data?.length}
               </p>
             </div>
             <button
-              className="flex flex-col justify-center items-center text-2xl h-full px-2 disabled:text-white/30 z-10"
+              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:text-white/30"
               onClick={handleNext}
               title={
                 indexPosition !== data?.length - 1

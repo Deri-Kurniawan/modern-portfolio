@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { brand, close, hamburger } from "../assets";
-import { navLinks } from "../constants";
 
 const Navbar = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +52,7 @@ const Navbar = ({ data }) => {
             />
           </h1>
         </button>
-        <ul className="hidden sm:flex flex-row justify-end items-center list-none">
+        <ul className="flex-row items-center justify-end hidden list-none sm:flex">
           {data.map((nav, index) => (
             <li
               key={index}
@@ -68,7 +67,7 @@ const Navbar = ({ data }) => {
           ))}
         </ul>
         <button
-          className="sm:hidden block"
+          className="block sm:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? (
@@ -95,7 +94,7 @@ const Navbar = ({ data }) => {
             isOpen ? "flex justify-center items-center" : "hidden"
           } absolute sm:hidden py-4 bg-black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
-          <ul className="flex flex-col justify-center items-center list-none">
+          <ul className="flex flex-col items-center justify-center list-none">
             {data.map((nav, index) => (
               <li
                 key={index}
