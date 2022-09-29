@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { arrowRight } from "../assets";
 
@@ -15,10 +16,12 @@ const Button = ({
     <div className="flex flex-row justify-center items-center">
       <span>{title}</span>
       {showIcon == true && (
-        <img
-          className="w-[24px] h-[24px] object-contain"
+        <Image
+          className="object-contain"
           src={arrowRight}
           alt="arrow_right"
+          width="24"
+          height="24"
         />
       )}
     </div>

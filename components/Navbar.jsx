@@ -1,8 +1,9 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { brand, close, hamburger } from "../assets";
 import { navLinks } from "../constants";
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [sectionIsInViewId, setSectionIsInViewId] = useState("home");
 
@@ -43,15 +44,17 @@ const Navbar = () => {
           }
         >
           <h1 aria-label="Deri Kurniawan Brand Logo">
-            <img
+            <Image
               className="w-[48px] h-[48px] lg:w-[74px] lg:h-[74px] z-[0] object-contain"
               src={brand}
               alt="brand_logo"
+              width="74"
+              height="74"
             />
           </h1>
         </button>
         <ul className="hidden sm:flex flex-row justify-end items-center list-none">
-          {navLinks.map((nav, index) => (
+          {data.map((nav, index) => (
             <li
               key={index}
               className={`${
@@ -69,16 +72,20 @@ const Navbar = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? (
-            <img
-              className="w-[25px] h-[25px] object-contain"
+            <Image
+              className="object-contain"
               src={close}
               alt="close_menu"
+              width="25"
+              height="25"
             />
           ) : (
-            <img
-              className="w-[40px] h-[18px] object-contain"
+            <Image
+              className="object-contain"
               src={hamburger}
               alt="toggle_button"
+              width="40"
+              height="18"
             />
           )}
         </button>
@@ -89,7 +96,7 @@ const Navbar = () => {
           } absolute sm:hidden py-4 bg-black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="flex flex-col justify-center items-center list-none">
-            {navLinks.map((nav, index) => (
+            {data.map((nav, index) => (
               <li
                 key={index}
                 className={`${
@@ -97,7 +104,7 @@ const Navbar = () => {
                     ? "text-secondary"
                     : "hover:text-secondary"
                 } ${
-                  navLinks.length - 1 !== index && "pb-4"
+                  data.length - 1 !== index && "pb-4"
                 } transition-all ease-linear duration-200`}
               >
                 <a href={nav.url}>{nav.label}</a>

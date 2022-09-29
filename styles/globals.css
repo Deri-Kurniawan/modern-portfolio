@@ -81,7 +81,7 @@
 }
 
 img {
-  @apply text-2xs;
+  @layer text-2xs;
 }
 
 .text-gradient {

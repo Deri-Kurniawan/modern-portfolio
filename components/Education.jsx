@@ -1,8 +1,9 @@
 import React from "react";
 import { educations } from "../constants";
 import Button from "./Button";
+import parse from "html-react-parser";
 
-const Education = () => (
+const Education = ({ data }) => (
   <section id="education" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1 flex-col">
@@ -31,7 +32,7 @@ const Education = () => (
       <div className="flex flex-1 pt-[30px] lg:pt-0 lg:ml-[111px]">
         {/* timeline start */}
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
-          {educations.map(({ timeRange, title, description, url }, index) => (
+          {data.map(({ timeRange, title, description, url }, index) => (
             <li
               key={index}
               className="mb-3 ml-4 hover-gradient-card rounded-[20px]"
@@ -56,7 +57,7 @@ const Education = () => (
 
                 {description && (
                   <p className="text-base font-normal text-dimWhite">
-                    {description}
+                    {parse(description || "")}
                   </p>
                 )}
               </div>

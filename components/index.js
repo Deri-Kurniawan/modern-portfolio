@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import Projects from "./Projects";
 import Education from "./Education";
 import Contacts from "./Contacts";
+import Feedback from "./Feedback";
 import Footer from "./Footer";
 import Button from "./Button";
 
@@ -16,6 +17,7 @@ export {
   Projects,
   Education,
   Contacts,
+  Feedback,
   Footer,
   Button,
 };

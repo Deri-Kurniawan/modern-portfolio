@@ -1,10 +1,10 @@
 import React from "react";
 import { stats } from "../constants";
 
-const Stats = () => (
+const Stats = ({ data }) => (
   <section id="stats" className="py-[50px] lg:py-[140px]">
     <div className="flex flex-row flex-wrap justify-between items-center">
-      {stats.map(({ label, value }, index) => (
+      {data.map(({ label, value }, index) => (
         <div
           key={index}
           className="flex flex-row flex-wrap items-center justify-start sm:justify-center"

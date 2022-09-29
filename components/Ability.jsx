@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 import { abilities } from "../constants";
 import ModalBox from "./ModalBox";
 import ModalToggler from "./ModalToggler";
 
-const Ability = () => (
+const Ability = ({ data }) => (
   <section id="ability" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1 flex-col">
@@ -20,20 +21,21 @@ const Ability = () => (
       </div>
       <div className="flex flex-1 flex-col pt-[30px] lg:pt-0 lg:pl-[60px]">
         <div>
-          {abilities.slice(0, 3).map(({ name, icon, description }, index) => (
+          {data.slice(0, 3).map(({ name, icon, description }, index) => (
             <div
               key={index}
               className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
             >
               <div className="mr-[20px]">
                 <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
-                  <img
-                    className="w-[42px] h-[42px] object-contain"
-                    src={icon}
-                    alt={`${name}_icon`}
-                    width="42px"
-                    height="42px"
-                  />
+                  <div className="w-[42px] h-[42px] object-contain">
+                    <Image
+                      src={icon}
+                      alt={`${name}_icon`}
+                      width="42"
+                      height="42"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col justify-end">
@@ -65,7 +67,7 @@ const Ability = () => (
       </p>
       <div className="mt-4 ss:mt-6 md:8 lg:mt-10 text-center">
         <div className="grid grid-cols-2 ss:grid-cols-3 md:grid-cols-4 grid-flow-row gap-2 md:gap-3 lg:md:gap-4">
-          {abilities.map(({ name, icon, description, inverted }, index) => (
+          {data.map(({ name, icon, description, inverted }, index) => (
             <div
               key={index}
               className="grid col-span-1 hover-gradient-card p-3 md:p-4 lg:p-5 rounded-[20px]"
@@ -73,12 +75,14 @@ const Ability = () => (
             >
               <div className="flex flex-col justify-start items-center">
                 <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">
-                  <img
-                    className={`w-[42px] h-[42px] object-contain ${
+                  <Image
+                    className={`object-contain ${
                       inverted ? `invert` : "invert-0"
                     } `}
                     src={icon}
                     alt={`${name}_icon`}
+                    width="42"
+                    height="42"
                   />
                 </div>
                 <div className="flex flex-col mt-3">

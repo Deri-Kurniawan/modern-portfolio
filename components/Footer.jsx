@@ -1,8 +1,9 @@
+import Image from "next/image";
 import React from "react";
 import { brand } from "../assets";
 import { footer, socialMedia } from "../constants";
 
-const Footer = () => (
+const Footer = ({ data }) => (
   <footer className="pt-[80px] lg:pt-[140px]">
     <div className="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
       <div className="flex-1 flex flex-col justify-start items-start mr-10">
@@ -13,11 +14,15 @@ const Footer = () => (
             })
           }
         >
-          <img
-            className="w-[48] h-[48px] lg:w-[74px] lg:h-[74px] object-contain"
-            src={brand}
-            alt="brand_logo"
-          />
+          <div className="lg:w-[74px] lg:h-[74px]">
+            <Image
+              className="object-contain"
+              src={brand}
+              alt="brand_logo"
+              width="48"
+              height="48"
+            />
+          </div>
         </button>
         <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] mt-4 ss:max-w-[90%] lg:max-w-[410px]">
           If you do something that makes you lose track of time. Rest assured
@@ -25,7 +30,7 @@ const Footer = () => (
         </p>
       </div>
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
-        {footer.map(({ label, urls }, index) => (
+        {data.map(({ label, urls }, index) => (
           <div key={index} className="flex flex-col ss:my-0 my-4 min-w-[150px]">
             <h3 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
               {label}
@@ -72,10 +77,12 @@ const Footer = () => (
               social.label !== "Credits" ? ` (${social.username})` : ""
             }`}
           >
-            <img
-              className="w-[24px] h-[24px] object-contain"
+            <Image
+              className="object-contain"
               src={social.icon}
               alt={`${social.label}_icon`}
+              width="24"
+              height="24"
             />
           </a>
         ))}

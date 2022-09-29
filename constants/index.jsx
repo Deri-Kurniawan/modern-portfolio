@@ -1,5 +1,3 @@
-import { projectsImages } from "../assets";
-
 const NewTabLink = ({ title, url, hover = true }) => (
   <a
     className={hover ? "hover:text-secondary" : "text-secondary"}
@@ -151,22 +149,15 @@ export const abilities = [
 export const projects = [
   {
     name: "Windows 11 OS Clone Web",
-    image: projectsImages.project1,
-    description: (
-      <>
-        Windows 11 OS clone as website using React JS + Tailwindcss. Checkout
-        this live site on{" "}
-        <NewTabLink
-          hover={false}
-          title="Vercel"
-          url="https://deri-kurniawan.vercel.app"
-        />
-      </>
-    ),
+    image:
+      "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663606820/Deri%20Kurniawan%20Portfolio%20Web%20App/projects/Project-1_iynwb0.png",
+    description:
+      "Windows 11 OS clone as website using React JS + Tailwindcss. Checkout this live site on https://deri-kurniawan.vercel.app/",
   },
   {
     name: "Other Example Projects",
-    image: projectsImages.project1,
+    image:
+      "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663606820/Deri%20Kurniawan%20Portfolio%20Web%20App/projects/Project-1_iynwb0.png",
     description:
       "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam",
   },
