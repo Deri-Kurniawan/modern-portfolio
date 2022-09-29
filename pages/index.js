@@ -11,6 +11,18 @@ import {
   Contacts,
   Footer,
 } from "../components";
+import {
+  hero,
+  stats,
+  navLinks,
+  abilities,
+  contacts,
+  educations,
+  feedbacks,
+  footer,
+  projects,
+  socialMedia,
+} from "../db/data.json";
 
 export default function Home({ data }) {
   const navbarContainerRef = useRef(null);
@@ -56,22 +68,22 @@ export default function Home({ data }) {
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
         <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
           <div className="lg:max-w-[1440px] m-auto w-full">
-            <Navbar data={data?.data?.navLinks} />
+            <Navbar data={navLinks} />
           </div>
         </div>
         <div className="max-w-[1440px] m-auto w-full z-[1]">
           <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-            <Hero data={data?.data?.hero} />
-            <Stats data={data?.data?.stats} />
-            <Ability data={data?.data?.abilities} />
-            <Projects data={data?.data?.projects} />
-            <Education data={data?.data?.educations} />
-            <Feedback data={data?.data?.feedbacks} />
-            <Contacts data={data?.data?.contacts} />
+            <Hero data={hero} />
+            <Stats data={stats} />
+            <Ability data={abilities} />
+            <Projects data={projects} />
+            <Education data={educations} />
+            <Feedback data={feedbacks} />
+            <Contacts data={contacts} />
             <Footer
               data={{
-                links: data?.data?.footer,
-                socialMedia: data?.data?.socialMedia,
+                links: footer,
+                socialMedia: socialMedia,
               }}
             />
             <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
@@ -84,24 +96,4 @@ export default function Home({ data }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  let url = process.env.BASE_URL_DEV;
-  if (process.env.NODE_ENV === "production") {
-    url = `${process.env.BASE_URL_PROD}/api/data`;
-  }
-
-  if (process.env.NODE_ENV === "development") {
-    url = `${process.env.BASE_URL_DEV}/api/data`;
-  }
-
-  const res = await fetch(url);
-  const data = await res.json();
-
-  return {
-    props: {
-      data,
-    },
-  };
 }
