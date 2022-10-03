@@ -52,7 +52,7 @@ export default function Home() {
           content="https://portfolio.deri-kurniawan.vercel.app"
         />
         <meta property="og:site_name" content="Deri Kurniawan Portfolio" />
-        <title>Deri Kurniawan Portfolio</title>
+        <title>Home - Deri Kurniawan</title>
       </Head>
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
         <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
