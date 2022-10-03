@@ -57,7 +57,7 @@ export default function Home({ data }) {
           property="og:description"
           content="About Deri Kurniawan Personality, Skills, Education, Projects and Feedback"
         />
-        <meta property="og:image" content="./Mockup.png" />
+        <meta property="og:image" content="/Mockup.png" />
         <meta
           property="og:url"
           content="https://portfolio.deri-kurniawan.vercel.app"
