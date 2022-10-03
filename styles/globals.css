@@ -137,3 +137,86 @@ img {
     #14101d 95.11%
   );
 }
+
+.fof__particle1 {
+  animation: fof__particle1 80s linear infinite;
+  -webkit-animation: fof__particle1 80s linear infinite;
+}
+
+@keyframes fof__particle1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -100px);
+    -webkit-transform: translate(30px, -100px);
+    -moz-transform: translate(30px, -100px);
+    -ms-transform: translate(30px, -100px);
+    -o-transform: translate(30px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.fof__particle2 {
+  @apply animate-pulse;
+}
+
+.fof__particle3 {
+  animation: fof__particle3 100s linear infinite;
+  -webkit-animation: fof__particle3 100s linear infinite;
+}
+
+@keyframes fof__particle3 {
+  0% {
+    transform: translateY(0, 0);
+    -webkit-transform: translateY(0, 0);
+    -moz-transform: translateY(0, 0);
+    -ms-transform: translateY(0, 0);
+    -o-transform: translateY(0, 0);
+  }
+  50% {
+    transform: translateY(80px);
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    -o-transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0, 0);
+    -webkit-transform: translateY(0, 0);
+    -moz-transform: translateY(0, 0);
+    -ms-transform: translateY(0, 0);
+    -o-transform: translateY(0, 0);
+  }
+}
+
+.fof__particle4 {
+  animation: fof__particle4 50s linear infinite;
+  -webkit-animation: fof__particle4 50s linear infinite;
+}
+
+@keyframes fof__particle4 {
+  0% {
+    transform: translateX(0, 0);
+    -webkit-transform: translateX(0, 0);
+    -moz-transform: translateX(0, 0);
+    -ms-transform: translateX(0, 0);
+    -o-transform: translateX(0, 0);
+  }
+  50% {
+    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    -o-transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0, 0);
+    -webkit-transform: translateX(0, 0);
+    -moz-transform: translateX(0, 0);
+    -ms-transform: translateX(0, 0);
+    -o-transform: translateX(0, 0);
+  }
+}
