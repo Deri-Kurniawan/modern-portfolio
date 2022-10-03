@@ -139,8 +139,8 @@ img {
 }
 
 .fof__particle1 {
-  animation: fof__particle1 80s linear infinite;
-  -webkit-animation: fof__particle1 80s linear infinite;
+  animation: fof__particle1 60s linear infinite;
+  -webkit-animation: fof__particle1 60s linear infinite;
 }
 
 @keyframes fof__particle1 {
@@ -160,12 +160,29 @@ img {
 }
 
 .fof__particle2 {
-  @apply animate-pulse;
+  animation: fof__particle2 80s linear infinite;
+  -webkit-animation: fof__particle2 40s linear infinite;
+}
+
+@keyframes fof__particle2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-90px, -100px);
+    -webkit-transform: translate(-90px, -100px);
+    -moz-transform: translate(-90px, -100px);
+    -ms-transform: translate(-90px, -100px);
+    -o-transform: translate(-90px, -100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .fof__particle3 {
-  animation: fof__particle3 100s linear infinite;
-  -webkit-animation: fof__particle3 100s linear infinite;
+  animation: fof__particle3 50s linear infinite;
+  -webkit-animation: fof__particle3 50s linear infinite;
 }
 
 @keyframes fof__particle3 {
@@ -193,8 +210,8 @@ img {
 }
 
 .fof__particle4 {
-  animation: fof__particle4 50s linear infinite;
-  -webkit-animation: fof__particle4 50s linear infinite;
+  animation: fof__particle4 40s linear infinite;
+  -webkit-animation: fof__particle4 40s linear infinite;
 }
 
 @keyframes fof__particle4 {
@@ -206,11 +223,11 @@ img {
     -o-transform: translateX(0, 0);
   }
   50% {
-    transform: translateX(50px);
-    -webkit-transform: translateX(50px);
-    -moz-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    -o-transform: translateX(50px);
+    transform: translateX(150px);
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    -ms-transform: translateX(150px);
+    -o-transform: translateX(150px);
   }
   100% {
     transform: translateX(0, 0);

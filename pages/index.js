@@ -56,7 +56,7 @@ export default function Home() {
       </Head>
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
         <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
-          <div className="lg:max-w-[1440px] m-auto w-full">
+          <div className="max-w-[1440px] m-auto w-full">
             <Navbar data={dataJSON.navLinks} />
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { hero } from "../assets";
 import Image from "next/image";
 
 const Hero = ({ data }) => (
@@ -10,7 +9,7 @@ const Hero = ({ data }) => (
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1">
         <h1 className="font-semibold text-[32px] ss:text-[42px] sm:text-[52px] md:text-[57px] lg:text-[62px]">
-          I’m <span className="text-gradient">{data?.fullName}</span>
+          I&apos;m <span className="text-gradient">{data?.fullName}</span>
           <br />
           A Passionate
           <br />
