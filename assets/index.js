@@ -6,6 +6,8 @@ import hamburger from "../assets/images/Hamburger.png";
 import hero from "../assets/images/Hero.png";
 import normalGradientEllipse from "./images/normal-gradient-ellipse.png";
 import blurGradientEllipse from "./images/blur-gradient-ellipse.png";
+import arrowRightCircle from "../assets/images/arrow-right-circle.png";
+import arrowLeftCircle from "../assets/images/arrow-left-circle.png";
 
 export {
   projectsImages,
@@ -16,4 +18,6 @@ export {
   hero,
   normalGradientEllipse,
   blurGradientEllipse,
+  arrowRightCircle,
+  arrowLeftCircle,
 };

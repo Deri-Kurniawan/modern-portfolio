@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import Image from "next/image";
 import parse from "html-react-parser";
+import { useRouter } from "next/router";
+import { arrowLeftCircle, arrowRightCircle } from "../assets";
 
 const Projects = ({ data }) => {
   const [indexPosition, setIndexPosition] = useState(0);
   const [projectData, setProjectData] = useState([]);
+  const router = useRouter();
 
   const handlePrev = () =>
     setIndexPosition((prev) => {
@@ -46,7 +48,7 @@ const Projects = ({ data }) => {
         <div className="flex flex-1">
           <div className="flex items-center justify-center lg:justify-start max-w-full lg:max-w-[600px]">
             <button
-              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:text-white/30"
+              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:opacity-50"
               onClick={handlePrev}
               title={
                 indexPosition !== data?.length + 1
@@ -55,7 +57,7 @@ const Projects = ({ data }) => {
               }
               disabled={indexPosition === 0}
             >
-              <BiLeftArrow />
+              <Image src={arrowLeftCircle} alt="" height={48} width={48} />
             </button>
             <div className="relative">
               <Image
@@ -70,7 +72,7 @@ const Projects = ({ data }) => {
               </p>
             </div>
             <button
-              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:text-white/30"
+              className="z-10 flex flex-col items-center justify-center h-full px-2 text-2xl disabled:opacity-50"
               onClick={handleNext}
               title={
                 indexPosition !== data?.length - 1
@@ -79,7 +81,7 @@ const Projects = ({ data }) => {
               }
               disabled={indexPosition === data?.length - 1}
             >
-              <BiRightArrow />
+              <Image src={arrowRightCircle} alt="" height={48} width={48} />
             </button>
           </div>
         </div>
@@ -96,12 +98,7 @@ const Projects = ({ data }) => {
           </div>
           <Button
             title="See More Project"
-            clickHandle={() => {
-              window.open(
-                "https://github.com/Deri-Kurniawan?tab=repositories",
-                "_blank"
-              );
-            }}
+            clickHandle={() => router.push("/projects")}
           />
         </div>
       </div>
