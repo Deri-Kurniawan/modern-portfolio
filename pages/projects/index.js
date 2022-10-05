@@ -31,12 +31,12 @@ export default function Projects() {
               className="flex flex-col items-center my-[15vh] py-56 lg:my-0 lg:h-full lg:w-full z-50"
               id="welcome"
             >
-              <h1 className="text-[43px] lg:text-[56px] text-gradient font-bold z-50">
+              <h1 className="text-center text-[43px] lg:text-[56px] text-gradient font-bold z-50">
                 Projects Exhibition
               </h1>
               <p className="text-[18px] lg:text-[23px] text-center z-50">
                 Let&apos;s see and explore what project which
-                <br />
+                <br className="lg:block hidden" />
                 I&apos;ve built and involved on a project
               </p>
               <div className="z-50">
