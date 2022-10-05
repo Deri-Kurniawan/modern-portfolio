@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 const Document = () => {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <meta name="theme-color" content="#010510" />
         <meta name="msapplication-TileColor" content="#00f6ff" />
