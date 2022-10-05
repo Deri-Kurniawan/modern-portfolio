@@ -16,8 +16,8 @@ const Contacts = ({ data }) => (
                     className="object-contain"
                     src={icon}
                     alt={`${label}_icon`}
-                    width="42"
-                    height="42"
+                    width={42}
+                    height={42}
                   />
                 </div>
               </div>

@@ -17,8 +17,8 @@ const Footer = ({ data }) => (
               className="object-contain"
               src={brand}
               alt="brand_logo"
-              width="48"
-              height="48"
+              width={48}
+              height={48}
             />
           </div>
         </button>
@@ -79,8 +79,8 @@ const Footer = ({ data }) => (
               className="object-contain"
               src={social.icon}
               alt={`${social.label}_icon`}
-              width="24"
-              height="24"
+              width={24}
+              height={24}
             />
           </a>
         ))}

@@ -47,8 +47,8 @@ const Navbar = ({ data }) => {
               className="w-[48px] h-[48px] lg:w-[74px] lg:h-[74px] z-[0] object-contain"
               src={brand}
               alt="brand_logo"
-              width="74"
-              height="74"
+              width={74}
+              height={74}
             />
           </h1>
         </button>
@@ -75,16 +75,16 @@ const Navbar = ({ data }) => {
               className="object-contain"
               src={close}
               alt="close_menu"
-              width="25"
-              height="25"
+              width={25}
+              height={25}
             />
           ) : (
             <Image
               className="object-contain"
               src={hamburger}
               alt="toggle_button"
-              width="40"
-              height="18"
+              width={40}
+              height={18}
             />
           )}
         </button>

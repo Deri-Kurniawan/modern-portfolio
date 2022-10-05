@@ -18,7 +18,7 @@ const Hero = ({ data }) => (
       </div>
       <div className="flex justify-center lg:items-end lg:justify-end">
         <div className="pt-[45px] lg:pt-0 w-[219px] h-[222px] ss:w-[271px] ss:h-[276px] sm:w-[379px] sm:h-[382px] lg:w-[421px] lg:h-[426px] z-[1]">
-          <Image src={data?.image} alt="person_hero" width="421" height="426" />
+          <Image src={data?.image} alt="person_hero" width={421} height={426} />
         </div>
       </div>
     </div>

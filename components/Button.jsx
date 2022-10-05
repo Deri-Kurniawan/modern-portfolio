@@ -20,8 +20,8 @@ const Button = ({
           className="object-contain"
           src={arrowRight}
           alt="arrow_right"
-          width="24"
-          height="24"
+          width={42}
+          height={42}
         />
       )}
     </div>

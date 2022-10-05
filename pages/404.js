@@ -32,8 +32,8 @@ export default function NotFound() {
               <Image
                 src={normalGradientEllipse}
                 alt="0"
-                width="206"
-                height="206"
+                width={206}
+                height={206}
               />
             </div>
             <h1 className="text-[180px] lg:text-[256px] font-extrabold m-auto translate-x-14 lg:translate-x-16 z-10">
@@ -61,23 +61,13 @@ export default function NotFound() {
           <Image src={blurGradientEllipse} alt="" width="44px" height="44px" />
         </div>
         <div className="absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] fof__particle2">
-          <Image
-            src={normalGradientEllipse}
-            alt=""
-            width="78px"
-            height="78px"
-          />
+          <Image src={normalGradientEllipse} alt="" width={78} height={78} />
         </div>
         <div className="absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse fof__particle3">
-          <Image
-            src={normalGradientEllipse}
-            alt=""
-            width="44px"
-            height="44px"
-          />
+          <Image src={normalGradientEllipse} alt="" width={44} height={44} />
         </div>
         <div className="absolute left-[850px] top-[550px] fof__particle4">
-          <Image src={blurGradientEllipse} alt="" width="56px" height="56px" />
+          <Image src={blurGradientEllipse} alt="" width={56} height={56} />
         </div>
 
         <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />

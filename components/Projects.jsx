@@ -64,8 +64,8 @@ const Projects = ({ data }) => {
                 className="z-10 object-contain"
                 src={projectData?.image}
                 alt={`project_image_${indexPosition + 1}`}
-                width="624"
-                height="362"
+                width={624}
+                height={362}
               />
               <p className="absolute z-10 px-2 py-1 text-center rounded-md top-3 right-4 bg-primary">
                 {indexPosition + 1}/{data?.length}

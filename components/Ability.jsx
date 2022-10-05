@@ -30,8 +30,8 @@ const Ability = ({ data }) => (
                     <Image
                       src={icon}
                       alt={`${name}_icon`}
-                      width="42"
-                      height="42"
+                      width={42}
+                      height={42}
                     />
                   </div>
                 </div>
@@ -78,8 +78,8 @@ const Ability = ({ data }) => (
                     } `}
                     src={icon}
                     alt={`${name}_icon`}
-                    width="42"
-                    height="42"
+                    width={42}
+                    height={42}
                   />
                 </div>
                 <div className="flex flex-col mt-3">

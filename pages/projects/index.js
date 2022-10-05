@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
 import { blurGradientEllipse, normalGradientEllipse } from "../../assets";
 import Button from "../../components/Button";
 
@@ -61,36 +60,26 @@ export default function Projects() {
             </section>
 
             <div className="absolute left-[300px] lg:left-[432px] top-[97px] animate-pulse fof__particle1">
-              <Image
-                src={blurGradientEllipse}
-                alt=""
-                width="44px"
-                height="44px"
-              />
+              <Image src={blurGradientEllipse} alt="" width={44} height={44} />
             </div>
             <div className="absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] fof__particle2">
               <Image
                 src={normalGradientEllipse}
                 alt=""
-                width="78px"
-                height="78px"
+                width={78}
+                height={78}
               />
             </div>
             <div className="absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse fof__particle3">
               <Image
                 src={normalGradientEllipse}
                 alt=""
-                width="44px"
-                height="44px"
+                width={44}
+                height={44}
               />
             </div>
             <div className="absolute left-[850px] top-[550px] fof__particle4">
-              <Image
-                src={blurGradientEllipse}
-                alt=""
-                width="56px"
-                height="56px"
-              />
+              <Image src={blurGradientEllipse} alt="" width={56} height={56} />
             </div>
             <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
             <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />

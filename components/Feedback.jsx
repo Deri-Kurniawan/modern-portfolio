@@ -35,8 +35,8 @@ const Feedback = ({ data }) => (
               className="object-cover rounded-full"
               src={avatar}
               alt="avatar"
-              width="46"
-              height="46"
+              width={46}
+              height={46}
               quality={10}
             />
             <div className="flex flex-col ml-3">
