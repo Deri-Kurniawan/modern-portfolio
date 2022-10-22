@@ -6,6 +6,11 @@ const Hero = ({ data }) => (
     id="home"
     className="pt-[90px] pb-[80px] ss:pt-[100px] ss:pb-[90px] lg:pt-[150px] lg:pb-[140px]"
   >
+    <div
+      id="particles"
+      className="absolute top-0 left-0 w-screen h-screen"
+    ></div>
+
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1">
         <h1 className="font-semibold text-[32px] ss:text-[42px] sm:text-[52px] md:text-[57px] lg:text-[62px]">

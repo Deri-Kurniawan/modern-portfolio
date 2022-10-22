@@ -12,6 +12,7 @@ import {
   Footer,
 } from "../components";
 import dataJSON from "../db/data.json";
+import Script from "next/script";
 
 export default function Home() {
   const navbarContainerRef = useRef(null);
@@ -52,6 +53,7 @@ export default function Home() {
           content="https://portfolio.deri-kurniawan.vercel.app"
         />
         <meta property="og:site_name" content="Deri Kurniawan Portfolio" />
+
         <title>Home - Deri Kurniawan</title>
       </Head>
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
@@ -83,6 +85,19 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Script
+        src="/scripts/particles.js-2.0.0/particles.min.js"
+        onLoad={() => {
+          // id element, config particles, callback
+          particlesJS.load(
+            "particles",
+            "/scripts/particles.js-2.0.0/particlesjs-config.json",
+            function () {
+              // console.log("callback - particles.js config loaded");
+            }
+          );
+        }}
+      ></Script>
     </>
   );
 }
