@@ -59,7 +59,7 @@ const Projects = ({ data }) => {
             >
               <Image src={arrowLeftCircle} alt="" height={48} width={48} />
             </button>
-            <div className="relative">
+            <div className="relative" data-aos="fade-in">
               <Image
                 className="z-10 object-contain"
                 src={projectData?.image}

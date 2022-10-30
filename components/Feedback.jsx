@@ -21,6 +21,9 @@ const Feedback = ({ data }) => (
         <div
           key={index}
           className="flex flex-1 flex-col items-start p-[40px] rounded-[20px] hover-gradient-card z-10"
+          data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
+          data-aos-duration="1000"
+          data-aos-offset={200 - index * 50}
         >
           <Image
             className="w-[44px] h-[26px] object-contain"

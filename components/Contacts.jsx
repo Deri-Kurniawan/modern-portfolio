@@ -9,6 +9,9 @@ const Contacts = ({ data }) => (
             <div
               key={index}
               className="flex flex-row items-center hover:bg-gradient p-5 hover-gradient-card rounded-[20px]"
+              data-aos="fade-right"
+              data-aos-delay={(index * 700) / 2}
+              data-aos-offset={200 - index * 50}
             >
               <div className="mr-[20px]">
                 <div className="flex justify-center items-center w-[64px] h-[64px] rounded-full bg-dimBlue">

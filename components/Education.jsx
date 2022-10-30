@@ -34,8 +34,16 @@ const Education = ({ data }) => (
               key={index}
               className="mb-3 ml-4 hover-gradient-card rounded-[20px]"
             >
-              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white" />
-              <div className="px-3 py-2">
+              <div
+                className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white"
+                data-aos="fade-up"
+                data-aos-delay={(index * 100) / 2}
+              />
+              <div
+                className="px-3 py-2"
+                data-aos="fade-left"
+                data-aos-delay={(index * 300) / 2}
+              >
                 <time className="mb-1 text-sm font-medium leading-none text-gray-400">
                   {timeRange}
                 </time>

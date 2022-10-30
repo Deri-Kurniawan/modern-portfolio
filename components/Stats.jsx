@@ -5,6 +5,9 @@ const Stats = ({ data }) => (
         <div
           key={index}
           className="flex flex-row flex-wrap items-center justify-start sm:justify-center"
+          data-aos="fade-up"
+          data-aos-delay={`${(index * 900) / 2}`}
+          data-aos-offset="100"
         >
           <div className="flex flex-row items-center justify-between">
             <span className="font-semibold text-[20px] ss:text-[25px] lg:text-[40px]">
