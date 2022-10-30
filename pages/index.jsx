@@ -103,7 +103,7 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   try {
-    const response = await fetch(process.env.BASE_API);
+    const response = await fetch(`${process.env.BASE_API}/data`);
     const data = await response.json();
 
     return {
