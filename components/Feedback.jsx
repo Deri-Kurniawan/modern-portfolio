@@ -31,14 +31,18 @@ const Feedback = ({ data }) => (
           />
           <p className="py-10">{review}</p>
           <div className="flex flex-row items-center">
-            <Image
-              className="object-cover rounded-full"
-              src={avatar}
-              alt="avatar"
-              width={46}
-              height={46}
-              quality={10}
-            />
+            <div className="avatar placeholder">
+              <div className="w-[46px] h-[46px] rounded-full bg-neutral-focus text-neutral-content">
+                <Image
+                  className="object-cover rounded-full"
+                  src={avatar}
+                  alt="avatar"
+                  width={46}
+                  height={46}
+                  quality={10}
+                />
+              </div>
+            </div>
             <div className="flex flex-col ml-3">
               <span className="text-[15px]">{name}</span>
               <p className="text-sm text-dimWhite">{position}</p>
