@@ -11,10 +11,9 @@ import {
   Contacts,
   Footer,
 } from "../components";
-import dataJSON from "../db/data.json";
 import Script from "next/script";
 
-export default function Home() {
+export default function Home(props) {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
@@ -59,22 +58,22 @@ export default function Home() {
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
         <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
           <div className="max-w-[1440px] m-auto w-full">
-            <Navbar data={dataJSON.navLinks} />
+            <Navbar data={props.data[0]?.navLinks} />
           </div>
         </div>
         <div className="max-w-[1440px] m-auto w-full z-[1]">
           <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-            <Hero data={dataJSON.hero} />
-            <Stats data={dataJSON.stats} />
-            <Ability data={dataJSON.abilities} />
-            <Projects data={dataJSON.projects} />
-            <Education data={dataJSON.educations} />
-            <Feedback data={dataJSON.feedbacks} />
-            <Contacts data={dataJSON.contacts} />
+            <Hero data={props.data[0]?.hero} />
+            <Stats data={props.data[0]?.stats} />
+            <Ability data={props.data[0]?.abilities} />
+            <Projects data={props.data[0]?.projects} />
+            <Education data={props.data[0]?.educations} />
+            <Feedback data={props.data[0]?.feedbacks} />
+            <Contacts data={props.data[0]?.contacts} />
             <Footer
               data={{
-                links: dataJSON.footer,
-                socialMedia: dataJSON.socialMedia,
+                links: props.data[0]?.footer,
+                socialMedia: props.data[0]?.socialMedia,
               }}
             />
             <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
@@ -100,4 +99,19 @@ export default function Home() {
       ></Script>
     </>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const response = await fetch(process.env.BASE_API);
+    const data = await response.json();
+
+    return {
+      props: {
+        data: [...data],
+      },
+    };
+  } catch (error) {
+    throw new Error("Error Fetching Data");
+  }
 }
