@@ -12,9 +12,13 @@ import {
   Footer,
 } from "../components";
 import Script from "next/script";
+import useSWR from "swr";
 
-export default function Home(props) {
+const dataFetcher = (...args) => fetch(...args).then((res) => res.json());
+
+export default function Home({ BASE_API }) {
   const navbarContainerRef = useRef(null);
+  const { data, error } = useSWR(`${BASE_API}/data`, dataFetcher);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +41,20 @@ export default function Home(props) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (error) return <div>failed to load</div>;
+  if (!data)
+    return (
+      <div className="relative overflow-hidden overflow-x-hidden overflow-y-scroll text-white bg-primary font-poppins">
+        <div className="max-w-[1440px] m-auto w-full h-screen z-[1]">
+          <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
+            <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
+            <div className="absolute w-[82.5px] h-[162px] lg:-left-[1000px] lg:top-[170px] -right-[50px] top-[200px] blur-[150px] lg:blur-[280px] bg-secondary  z-[0]" />
+            <div className="absolute w-[436.52px] h-[544.07px] left-[1000px] -top-[29px] blur-[300px] rounded-[200px] rotate-[47.46deg] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] z-0" />
+          </div>
+        </div>
+      </div>
+    );
+
   return (
     <>
       <Head>
@@ -58,22 +76,22 @@ export default function Home(props) {
       <div className="relative overflow-hidden text-white bg-primary font-poppins">
         <div ref={navbarContainerRef} className="fixed top-0 z-50 w-full">
           <div className="max-w-[1440px] m-auto w-full">
-            <Navbar data={props.data[0]?.navLinks} />
+            <Navbar data={data[0]?.navLinks} />
           </div>
         </div>
         <div className="max-w-[1440px] m-auto w-full z-[1]">
           <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-            <Hero data={props.data[0]?.hero} />
-            <Stats data={props.data[0]?.stats} />
-            <Ability data={props.data[0]?.abilities} />
-            <Projects data={props.data[0]?.projects} />
-            <Education data={props.data[0]?.educations} />
-            <Feedback data={props.data[0]?.feedbacks} />
-            <Contacts data={props.data[0]?.contacts} />
+            <Hero data={data[0]?.hero} />
+            <Stats data={data[0]?.stats} />
+            <Ability data={data[0]?.abilities} />
+            <Projects data={data[0]?.projects} />
+            <Education data={data[0]?.educations} />
+            <Feedback data={data[0]?.feedbacks} />
+            <Contacts data={data[0]?.contacts} />
             <Footer
               data={{
-                links: props.data[0]?.footer,
-                socialMedia: props.data[0]?.socialMedia,
+                links: data[0]?.footer,
+                socialMedia: data[0]?.socialMedia,
               }}
             />
             <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
@@ -101,18 +119,26 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps() {
-  try {
-    const response = await fetch(`${process.env.BASE_API}/data`);
-    const data = await response.json();
+// export async function getStaticProps() {
+//   try {
+//     const response = await fetch(`${process.env.BASE_API}/data`);
+//     const data = await response.json();
 
-    return {
-      props: {
-        data: [...data],
-      },
-      revalidate: 5, // In seconds
-    };
-  } catch (error) {
-    throw new Error("Error Fetching Data");
-  }
+//     return {
+//       props: {
+//         data: [...data],
+//       },
+//       revalidate: 5, // In seconds
+//     };
+//   } catch (error) {
+//     throw new Error("Error Fetching Data");
+//   }
+// }
+
+export function getStaticProps() {
+  return {
+    props: {
+      BASE_API: process.env.BASE_API,
+    },
+  };
 }
