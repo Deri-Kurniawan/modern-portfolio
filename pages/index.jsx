@@ -132,7 +132,7 @@ export default function Home({ BASE_API }) {
             onLoad={() => {
               AOS.init({
                 duration: 500,
-                // once: true,
+                once: true,
               });
             }}
             defer
