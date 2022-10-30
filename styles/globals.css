@@ -33,19 +33,19 @@
 }
 
 .navbar-ease-in {
-  transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in !important;
+  -webkit-transition: all 0.3s ease-in !important;
+  -moz-transition: all 0.3s ease-in !important;
+  -ms-transition: all 0.3s ease-in !important;
+  -o-transition: all 0.3s ease-in !important;
 }
 
 .navbar-ease-out {
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out !important;
+  -webkit-transition: all 0.3s ease-out !important;
+  -moz-transition: all 0.3s ease-out !important;
+  -ms-transition: all 0.3s ease-out !important;
+  -o-transition: all 0.3s ease-out !important;
 }
 
 .hover-gradient-card:hover {
