@@ -110,6 +110,7 @@ export async function getStaticProps() {
       props: {
         data: [...data],
       },
+      revalidate: 5, // In seconds
     };
   } catch (error) {
     throw new Error("Error Fetching Data");
