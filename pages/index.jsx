@@ -13,8 +13,16 @@ import {
 } from "../components";
 import Script from "next/script";
 import useSWR from "swr";
+import FetchFailed from "../components/errors/FetchFailed";
 
-const dataFetcher = (...args) => fetch(...args).then((res) => res.json());
+const dataFetcher = async (...args) => {
+  try {
+    const res = await fetch(...args);
+    return await res.json();
+  } catch (err) {
+    throw new Error(err);
+  }
+};
 
 export default function Home({ BASE_API }) {
   const navbarContainerRef = useRef(null);
@@ -23,13 +31,13 @@ export default function Home({ BASE_API }) {
   useEffect(() => {
     const handleScroll = () => {
       if (scrollY === 0) {
-        navbarContainerRef.current.classList.remove(
+        navbarContainerRef?.current?.classList?.remove(
           "navbar-glass",
           "navbar-ease-out"
         );
       }
       if (scrollY > 0) {
-        navbarContainerRef.current.classList.add(
+        navbarContainerRef?.current?.classList?.add(
           "navbar-glass",
           "navbar-ease-in"
         );
@@ -41,7 +49,11 @@ export default function Home({ BASE_API }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (error) return <div>failed to load</div>;
+  if (
+    error ||
+    (typeof data !== "object" && data?.toLowerCase() === "not found")
+  )
+    return <FetchFailed />;
 
   return (
     <>
@@ -144,6 +156,10 @@ export default function Home({ BASE_API }) {
 }
 
 export function getStaticProps() {
+  if (!process.env.BASE_API) {
+    throw new Error("BASE_API is missing or not defined in .env.local");
+  }
+
   return {
     props: {
       BASE_API: process.env.BASE_API,

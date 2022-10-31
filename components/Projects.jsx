@@ -62,7 +62,10 @@ const Projects = ({ data }) => {
             <div className="relative" data-aos="fade-in">
               <Image
                 className="z-10 object-contain"
-                src={projectData?.image}
+                src={
+                  projectData?.image ||
+                  "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663606820/Deri%20Kurniawan%20Portfolio%20Web%20App/projects/Project-1_iynwb0.png"
+                }
                 alt={`project_image_${indexPosition + 1}`}
                 width={624}
                 height={362}

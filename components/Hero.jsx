@@ -38,8 +38,8 @@ const Hero = ({ data }) => (
             alt="person_hero"
             width={421}
             height={426}
-            loader={({ src }) => src}
             priority={true}
+            unoptimized={true}
           />
         </div>
       </div>
