@@ -29,10 +29,6 @@ const Document = () => {
         <link rel="icon" type="image/svg+xml" href="/brand.svg" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        />
       </Head>
       <body>
         <Main />

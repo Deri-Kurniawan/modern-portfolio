@@ -49,6 +49,7 @@ const Navbar = ({ data }) => {
               alt="brand_logo"
               width={74}
               height={74}
+              priority={true}
             />
           </h1>
         </button>

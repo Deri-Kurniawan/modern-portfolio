@@ -19,6 +19,7 @@ const Footer = ({ data }) => (
               alt="brand_logo"
               width={48}
               height={48}
+              priority={false}
             />
           </div>
         </button>

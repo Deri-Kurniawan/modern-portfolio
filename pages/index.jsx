@@ -14,6 +14,7 @@ import {
 import Script from "next/script";
 import useSWR from "swr";
 import FetchFailed from "../components/errors/FetchFailed";
+import { init as AOSInit } from "aos";
 
 const dataFetcher = async (...args) => {
   try {
@@ -29,6 +30,11 @@ export default function Home({ BASE_API }) {
   const { data, error } = useSWR(`${BASE_API}/data`, dataFetcher);
 
   useEffect(() => {
+    AOSInit({
+      duration: 500,
+      once: true,
+    });
+
     const handleScroll = () => {
       if (scrollY === 0) {
         navbarContainerRef?.current?.classList?.remove(
@@ -131,17 +137,6 @@ export default function Home({ BASE_API }) {
                 }
               );
             }}
-          ></Script>
-
-          <Script
-            src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-            onLoad={() => {
-              AOS.init({
-                duration: 500,
-                once: true,
-              });
-            }}
-            defer
           ></Script>
         </>
       )}
