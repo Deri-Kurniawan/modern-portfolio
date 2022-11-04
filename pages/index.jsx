@@ -70,12 +70,6 @@ export default function Home({ BASE_API }) {
           content="https://portfolio.deri-kurniawan.vercel.app"
         />
         <meta property="og:site_name" content="Deri Kurniawan Portfolio" />
-
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        />
-
         <title>Home - Deri Kurniawan</title>
       </Head>
 
@@ -83,9 +77,9 @@ export default function Home({ BASE_API }) {
         <div className="relative overflow-hidden overflow-x-hidden overflow-y-scroll text-white bg-primary font-poppins">
           <div className="max-w-[1440px] m-auto w-full h-screen z-[1]">
             <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-              <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
-              <div className="absolute w-[82.5px] h-[162px] lg:-left-[1000px] lg:top-[170px] -right-[50px] top-[200px] blur-[150px] lg:blur-[280px] bg-secondary  z-[0]" />
-              <div className="absolute w-[436.52px] h-[544.07px] left-[1000px] -top-[29px] blur-[300px] rounded-[200px] rotate-[47.46deg] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] z-0" />
+              <al-home-1 />
+              <al-home-2 />
+              <al-home-3 />
             </div>
           </div>
         </div>
@@ -116,11 +110,11 @@ export default function Home({ BASE_API }) {
                     socialMedia: data[0]?.socialMedia,
                   }}
                 />
-                <div className="absolute w-[195px] h-[324px] -left-[97px] top-[170px] blur-[280px] lg:bg-white bg-white/[0.5]  z-[0]" />
-                <div className="absolute w-[82.5px] h-[162px] lg:-left-[1000px] lg:top-[170px] -right-[50px] top-[200px] blur-[150px] lg:blur-[280px] bg-secondary  z-[0]" />
-                <div className="absolute w-[436.52px] h-[544.07px] left-[1000px] -top-[29px] blur-[300px] rounded-[200px] rotate-[47.46deg] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] z-0" />
-                <div className="absolute w-[405px] h-[471px] -left-[300px] top-[1600px] lg:left-[257.09px] lg:top-[1825.18px] lg:bg-white/[0.6] bg-white/[0.3] blur-[500px] lg:blur-[370px] rotate-[176.62deg] z-[0]" />
-                <div className="absolute w-[436.52px] h-[544.07px] -right-[400px] top-[4000px] lg:left-[1100px] lg:top-[3200px] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] blur-[370px] rounded-[200px] rotate-[47.46deg] z-0" />
+                <al-home-1 />
+                <al-home-2 />
+                <al-home-3 />
+                <al-home-4 />
+                <al-home-5 />
               </div>
             </div>
           </div>
