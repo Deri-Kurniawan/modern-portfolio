@@ -57,7 +57,12 @@ const Projects = ({ data }) => {
               }
               disabled={indexPosition === 0}
             >
-              <Image src={arrowLeftCircle} alt="" height={48} width={48} />
+              <Image
+                src={arrowLeftCircle}
+                alt="previous_button"
+                height={48}
+                width={48}
+              />
             </button>
             <div className="relative" data-aos="fade-in">
               <Image
@@ -84,7 +89,12 @@ const Projects = ({ data }) => {
               }
               disabled={indexPosition === data?.length - 1}
             >
-              <Image src={arrowRightCircle} alt="" height={48} width={48} />
+              <Image
+                src={arrowRightCircle}
+                alt="next_button"
+                height={48}
+                width={48}
+              />
             </button>
           </div>
         </div>

@@ -35,7 +35,9 @@ const Hero = ({ data }) => (
         >
           <Image
             src={data?.image}
-            alt="person_hero"
+            alt={`${data?.fullName
+              ?.replace(" ", "_")
+              .toLowerCase()}_hero_image`}
             width={421}
             height={426}
             priority={true}

@@ -18,7 +18,7 @@ const Contacts = ({ data }) => (
                   <Image
                     className="object-contain"
                     src={icon}
-                    alt={`${label}_icon`}
+                    alt={`${label?.replace(" ", "_")?.toLowerCase()}_icon`}
                     width={42}
                     height={42}
                   />

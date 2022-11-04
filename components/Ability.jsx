@@ -32,7 +32,7 @@ const Ability = ({ data }) => (
                   <div className="w-[42px] h-[42px] object-contain">
                     <Image
                       src={icon}
-                      alt={`${name}_icon`}
+                      alt={`${name?.replace(" ", "_")?.toLowerCase()}_icon`}
                       width={42}
                       height={42}
                     />
@@ -80,7 +80,7 @@ const Ability = ({ data }) => (
                       inverted ? `invert` : "invert-0"
                     } `}
                     src={icon}
-                    alt={`${name}_icon`}
+                    alt={`${name?.replace(" ", "_")?.toLowerCase()}_icon`}
                     width={42}
                     height={42}
                   />

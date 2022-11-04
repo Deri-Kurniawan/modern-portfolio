@@ -78,7 +78,7 @@ const Footer = ({ data }) => (
             <Image
               className="object-contain"
               src={social.icon}
-              alt={`${social.label}_icon`}
+              alt={`${social?.label?.replace(" ", "_").toLowerCase()}_icon`}
               width={24}
               height={24}
             />
