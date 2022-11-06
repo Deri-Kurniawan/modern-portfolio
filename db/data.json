@@ -1,7 +1,7 @@
 {
   "hero": {
     "fullName": "Deri Kurniawan",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Full Stack Developer",
     "image": "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663610416/Deri%20Kurniawan%20Portfolio%20Web%20App/Hero_o6ubic.png"
   },
   "navLinks": [
@@ -42,7 +42,7 @@
     },
     {
       "label": "Total Client",
-      "value": 7
+      "value": 5
     }
   ],
   "abilities": [
@@ -200,19 +200,19 @@
     {
       "name": "Alex Peterson",
       "position": "Project Manager",
-      "avatar": "https://images.unsplash.com/photo-1508674861872-a51e06c50c9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "avatar": "https://picsum.photos/id/22/200",
       "review": "Deri Kurniawan is a very competent person in the field of multiplatform applications."
     },
     {
       "name": "Vanessa Angela",
-      "position": "Backend Developer",
-      "avatar": "https://images.unsplash.com/photo-1508674861872-a51e06c50c9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "position": "UI/UX Designer",
+      "avatar": "https://picsum.photos//id/64/200",
       "review": "Deri Kurniawan is a very professional person and has helped me complete a project owned by the company."
     },
     {
       "name": "Kenn Gallanger",
       "position": "CEO & Founder",
-      "avatar": "https://images.unsplash.com/photo-1508674861872-a51e06c50c9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "avatar": "https://picsum.photos/id/177/200",
       "review": "There can be no doubt about this Deri's ability. I am very happy to be able to use his services."
     }
   ],
@@ -258,7 +258,7 @@
       ]
     },
     {
-      "label": "Blogs & Social",
+      "label": "Blogs & Socials",
       "urls": [
         {
           "label": "Stack Overflow",
