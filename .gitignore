@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# progressive web apps
+/public/sw.js
+/public/sw*.js
+/public/workbox-*.js
