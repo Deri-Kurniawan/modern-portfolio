@@ -12,22 +12,11 @@ import {
   Footer,
 } from "../components";
 import Script from "next/script";
-import useSWR from "swr";
 import FetchFailed from "../components/errors/FetchFailed";
 import { init as AOSInit } from "aos";
 
-const dataFetcher = async (...args) => {
-  try {
-    const res = await fetch(...args);
-    return await res.json();
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
-export default function Home({ BASE_API }) {
+export default function Home({ data }) {
   const navbarContainerRef = useRef(null);
-  const { data, error } = useSWR(`${BASE_API}/data`, dataFetcher);
 
   useEffect(() => {
     AOSInit({
@@ -55,10 +44,7 @@ export default function Home({ BASE_API }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (
-    error ||
-    (typeof data !== "object" && data?.toLowerCase() === "not found")
-  )
+  if (typeof data !== "object" || typeof data === "undefined")
     return <FetchFailed />;
 
   return (
@@ -79,79 +65,73 @@ export default function Home({ BASE_API }) {
         <title>Home - Deri Kurniawan</title>
       </Head>
 
-      {!data ? (
-        <div className="relative overflow-hidden overflow-x-hidden overflow-y-scroll text-white bg-primary font-poppins">
-          <div className="max-w-[1440px] m-auto w-full h-screen z-[1]">
-            <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-              <al-home-1 />
-              <al-home-2 />
-              <al-home-3 />
-            </div>
+      <div className="relative overflow-hidden text-white bg-primary font-poppins">
+        <div
+          ref={navbarContainerRef}
+          className="fixed top-0 z-50 w-full"
+          data-aos="fade-in"
+        >
+          <div className="max-w-[1440px] m-auto w-full">
+            <Navbar data={data?.navLinks} />
           </div>
         </div>
-      ) : (
-        <>
-          <div className="relative overflow-hidden text-white bg-primary font-poppins">
-            <div
-              ref={navbarContainerRef}
-              className="fixed top-0 z-50 w-full"
-              data-aos="fade-in"
-            >
-              <div className="max-w-[1440px] m-auto w-full">
-                <Navbar data={data[0]?.navLinks} />
-              </div>
-            </div>
-            <div className="max-w-[1440px] m-auto w-full z-[1]">
-              <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
-                <Hero data={data[0]?.hero} />
-                <Stats data={data[0]?.stats} />
-                <Ability data={data[0]?.abilities} />
-                <Projects data={data[0]?.projects} />
-                <Education data={data[0]?.educations} />
-                <Feedback data={data[0]?.feedbacks} />
-                <Contacts data={data[0]?.contacts} />
-                <Footer
-                  data={{
-                    links: data[0]?.footer,
-                    socialMedia: data[0]?.socialMedia,
-                  }}
-                />
-                <al-home-1 />
-                <al-home-2 />
-                <al-home-3 />
-                <al-home-4 />
-                <al-home-5 />
-              </div>
-            </div>
+        <div className="max-w-[1440px] m-auto w-full z-[1]">
+          <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
+            <Hero data={data?.hero} />
+            <Stats data={data?.stats} />
+            <Ability data={data?.abilities} />
+            <Projects data={data?.projects} />
+            <Education data={data?.educations} />
+            <Feedback data={data?.feedbacks} />
+            <Contacts data={data?.contacts} />
+            <Footer
+              data={{
+                links: data?.footer,
+                socialMedia: data?.socialMedia,
+              }}
+            />
+            <al-home-1 />
+            <al-home-2 />
+            <al-home-3 />
+            <al-home-4 />
+            <al-home-5 />
           </div>
-          <Script
-            id="particle"
-            src="/scripts/particles.js-2.0.0/particles.min.js"
-            onLoad={() => {
-              // id element, config particles, callback
-              particlesJS.load(
-                "particles",
-                "/scripts/particles.js-2.0.0/particlesjs-config.json",
-                function () {
-                  // console.log("callback - particles.js config loaded");
-                }
-              );
-            }}
-          ></Script>
-        </>
-      )}
+        </div>
+      </div>
+      <Script
+        id="particle"
+        src="/scripts/particles.js-2.0.0/particles.min.js"
+        onLoad={() => {
+          // id element, config particles, callback
+          particlesJS.load(
+            "particles",
+            "/scripts/particles.js-2.0.0/particlesjs-config.json",
+            function () {
+              // console.log("callback - particles.js config loaded");
+            }
+          );
+        }}
+      ></Script>
     </>
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
   if (!process.env.BASE_API) {
     throw new Error("BASE_API is missing or not defined in .env.local");
   }
 
-  return {
-    props: {
-      BASE_API: process.env.BASE_API,
-    },
-  };
+  try {
+    const response = await fetch(`${process.env.BASE_API}/data`);
+    const data = await response.json();
+
+    return {
+      props: {
+        data: data[0],
+      },
+      revalidate: 1,
+    };
+  } catch (err) {
+    throw new Error(err);
+  }
 }
