@@ -44,6 +44,7 @@ const Feedback = ({ data }) => (
                   height={46}
                   quality={10}
                   loader={({ src }) => src}
+                  unoptimized={true}
                 />
               </div>
             </div>
