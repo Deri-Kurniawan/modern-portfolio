@@ -16,7 +16,7 @@ import FetchFailed from "../components/errors/FetchFailed";
 import { init as AOSInit } from "aos";
 import { Fragment } from "react";
 
-export default function Home({ data }) {
+export default function Home({ data, error }) {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
@@ -45,8 +45,7 @@ export default function Home({ data }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (typeof data !== "object" || typeof data === "undefined")
-    return <FetchFailed />;
+  if (error !== null) return <FetchFailed />;
 
   return (
     <Fragment>
@@ -141,10 +140,16 @@ export async function getStaticProps() {
     return {
       props: {
         data: data[0],
+        error: null,
       },
       revalidate: 1,
     };
   } catch (err) {
-    throw new Error(err);
+    return {
+      props: {
+        data: [],
+        error: err.message,
+      },
+    };
   }
 }
