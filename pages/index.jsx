@@ -117,13 +117,25 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  if (!process.env.BASE_API) {
-    throw new Error("BASE_API is missing or not defined in .env.local");
+  if (process.env.NODE_ENV === "production" && !process.env.BASE_URL) {
+    throw new Error("BASE_URL is missing or not defined in .env.local");
   }
 
   try {
-    const response = await fetch(`${process.env.BASE_API}/data`);
-    const data = await response.json();
+    const response = await fetch(
+      `${
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000"
+          : process.env.BASE_URL
+      }/api/data`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const { data } = await response.json();
 
     return {
       props: {

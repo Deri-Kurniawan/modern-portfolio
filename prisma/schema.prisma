@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type DataAbilities {
+  description String
+  icon        String
+  inverted    Boolean?
+  name        String
+}
+
+type DataContacts {
+  description String
+  icon        String
+  label       String
+  url         String
+}
+
+type DataEducations {
+  description String
+  timeRange   String
+  title       String
+  url         String
+}
+
+type DataFeedbacks {
+  avatar   String
+  name     String
+  position String
+  review   String
+}
+
+type DataFooter {
+  label String
+  urls  DataFooterUrls[]
+}
+
+type DataFooterUrls {
+  blank Boolean
+  label String
+  url   String
+}
+
+type DataHero {
+  fullName String
+  image    String
+  jobTitle String
+}
+
+type DataNavLinks {
+  id    String
+  label String
+  url   String
+}
+
+type DataProjects {
+  description String
+  image       String
+  name        String
+}
+
+type DataSocialMedia {
+  icon     String
+  label    String
+  url      String
+  username String?
+}
+
+type DataStats {
+  label String
+  value Int
+}
+
+model data {
+  id          String            @id @default(auto()) @map("_id") @db.ObjectId
+  abilities   DataAbilities[]
+  contacts    DataContacts[]
+  educations  DataEducations[]
+  feedbacks   DataFeedbacks[]
+  footer      DataFooter[]
+  hero        DataHero
+  navLinks    DataNavLinks[]
+  projects    DataProjects[]
+  socialMedia DataSocialMedia[]
+  stats       DataStats[]
+}
