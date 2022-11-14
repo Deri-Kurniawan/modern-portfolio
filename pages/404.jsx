@@ -4,12 +4,13 @@ import { blurGradientEllipse, normalGradientEllipse } from "../assets";
 import Button from "../components/Button";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Fragment } from "react";
 
 export default function NotFound() {
   const router = useRouter();
 
   return (
-    <>
+    <Fragment>
       <Head>
         <meta property="og:type" content="404" />
         <meta property="og:title" content="Page Not Found" />
@@ -22,9 +23,9 @@ export default function NotFound() {
         <meta property="og:site_name" content="404 - Deri Kurniawan" />
         <title>404 - Deri Kurniawan</title>
       </Head>
-      <div className="relative text-white bg-primary font-poppins w-screen h-screen overflow-x-hidden">
+      <div className="relative w-screen h-screen overflow-x-hidden text-white bg-primary font-poppins">
         <div className="flex flex-col items-center my-[15vh] lg:my-0 lg:h-full lg:w-full z-50">
-          <div className="relative flex flex-row justify-center items-center">
+          <div className="relative flex flex-row items-center justify-center">
             <h1 className="text-[180px] lg:text-[256px] font-extrabold m-auto -translate-x-14 lg:-translate-x-16 z-30">
               4
             </h1>
@@ -48,7 +49,7 @@ export default function NotFound() {
             <br />
             temporarily moved or deleted
           </p>
-          <div className="-translate-y-12 z-50">
+          <div className="z-50 -translate-y-12">
             <Button
               showIcon={false}
               title="Go Back Home"
@@ -73,6 +74,6 @@ export default function NotFound() {
         <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
         <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
       </div>
-    </>
+    </Fragment>
   );
 }

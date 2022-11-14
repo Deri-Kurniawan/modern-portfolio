@@ -1,12 +1,13 @@
 import Button from "../components/Button";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Fragment } from "react";
 
 export default function Offline() {
   const router = useRouter();
 
   return (
-    <>
+    <Fragment>
       <Head>
         <meta property="og:type" content="200" />
         <meta property="og:title" content="No Internet" />
@@ -44,6 +45,6 @@ export default function Offline() {
         <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
         <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
       </div>
-    </>
+    </Fragment>
   );
 }

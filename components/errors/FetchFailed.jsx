@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { blurGradientEllipse, normalGradientEllipse } from "../../assets";
 import Head from "next/head";
+import { Fragment } from "react";
 
 export default function FetchFailed() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function FetchFailed() {
   }, []);
 
   return (
-    <>
+    <Fragment>
       <Head>
         <meta property="og:type" content="404" />
         <meta property="og:title" content="Page Not Found" />
@@ -69,6 +70,6 @@ export default function FetchFailed() {
         <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
         <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
       </div>
-    </>
+    </Fragment>
   );
 }

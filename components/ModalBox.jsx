@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 const ModalBox = ({
   id = "defaultModalId",
@@ -7,9 +7,9 @@ const ModalBox = ({
   children,
 }) => {
   return (
-    <>
+    <Fragment>
       <input type="checkbox" id={id} className="modal-toggle" />
-      <label htmlFor={id} className="modal cursor-pointer" title="Close Area">
+      <label htmlFor={id} className="cursor-pointer modal" title="Close Area">
         <label
           className={`bg-primary modal-box ${width} max-w-5xl relative max-h-[80%] lg:max-h-[85%] ${styles}`}
           title=""
@@ -17,7 +17,7 @@ const ModalBox = ({
           {children}
         </label>
       </label>
-    </>
+    </Fragment>
   );
 };
 

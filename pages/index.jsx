@@ -14,6 +14,7 @@ import {
 import Script from "next/script";
 import FetchFailed from "../components/errors/FetchFailed";
 import { init as AOSInit } from "aos";
+import { Fragment } from "react";
 
 export default function Home({ data }) {
   const navbarContainerRef = useRef(null);
@@ -48,7 +49,7 @@ export default function Home({ data }) {
     return <FetchFailed />;
 
   return (
-    <>
+    <Fragment>
       <Head>
         <meta property="og:type" content="portfolio" />
         <meta property="og:title" content="Deri Kurniawan Modern Portfolio" />
@@ -112,7 +113,7 @@ export default function Home({ data }) {
           );
         }}
       ></Script>
-    </>
+    </Fragment>
   );
 }
 

@@ -3,12 +3,13 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { blurGradientEllipse, normalGradientEllipse } from "../../assets";
 import Button from "../../components/Button";
+import { Fragment } from "react";
 
 export default function Projects() {
   const router = useRouter();
 
   return (
-    <>
+    <Fragment>
       <Head>
         <meta property="og:type" content="projects" />
         <meta property="og:title" content="Deri Kurniawan Projects" />
@@ -24,7 +25,7 @@ export default function Projects() {
         <meta property="og:site_name" content="Project - Deri Kurniawan" />
         <title>Projects - Deri Kurniawan</title>
       </Head>
-      <div className="relative text-white bg-primary font-poppins w-screen h-screen overflow-x-hidden">
+      <div className="relative w-screen h-screen overflow-x-hidden text-white bg-primary font-poppins">
         <div className="max-w-[1440px] m-auto w-full z-[1]">
           <div className="relative px-[30px] ss:px-[50px] sm:px-[70px] md:px-[90px] lg:px-[106px]">
             <section
@@ -36,7 +37,7 @@ export default function Projects() {
               </h1>
               <p className="text-[18px] lg:text-[23px] text-center z-50">
                 Let&apos;s see and explore what project which
-                <br className="lg:block hidden" />
+                <br className="hidden lg:block" />
                 I&apos;ve built and involved on a project
               </p>
               <div className="z-50">
@@ -86,6 +87,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 }
