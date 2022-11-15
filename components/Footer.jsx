@@ -38,11 +38,12 @@ const Footer = ({ data }) => (
               {urls.map(({ label, url, blank }, index) => (
                 <li
                   key={index}
-                  className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                  className={`font-poppins font-normal text-[16px] leading-[24px ${
                     index !== url.length - 1 ? "mb-4" : "mb-0"
                   }`}
                 >
                   <a
+                    className="text-dimWhite hover:text-secondary"
                     href={url}
                     target={blank ? "_blank" : "_self"}
                     rel="noreferrer noopener"
