@@ -15,6 +15,13 @@ import Script from "next/script";
 import FetchFailed from "../components/errors/FetchFailed";
 import { init as AOSInit } from "aos";
 import { Fragment } from "react";
+import internalData from "../db/data.json";
+import {
+  EnvironmentError,
+  envIsNotDefined,
+  envIsProduction,
+  envSameAs,
+} from "../utils/envHelper";
 
 export default function Home({ data, error }) {
   const navbarContainerRef = useRef(null);
@@ -117,39 +124,60 @@ export default function Home({ data, error }) {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === "production" && !process.env.BASE_URL) {
-    throw new Error("BASE_URL is missing or not defined in .env.local");
+  if (envIsNotDefined("DATA_SOURCE")) {
+    throw new EnvironmentError(
+      "DATA_SOURCE is not defined as environtment variable"
+    );
   }
 
-  try {
-    const response = await fetch(
-      `${
-        process.env.NODE_ENV === "development"
-          ? "http://localhost:3000"
-          : process.env.BASE_URL
-      }/api/data`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    const { data } = await response.json();
+  if (envSameAs("DATA_SOURCE", "internal")) {
+    if (envIsProduction() && envIsNotDefined("BASE_URL")) {
+      throw new EnvironmentError(
+        "BASE_URL is not defined as environtment variable"
+      );
+    }
 
     return {
       props: {
-        data: data[0],
+        data: internalData,
         error: null,
       },
-      revalidate: 1,
     };
-  } catch (err) {
-    return {
-      props: {
-        data: [],
-        error: err.message,
-      },
-    };
+  } else if (envSameAs("DATA_SOURCE", "external")) {
+    try {
+      const response = await fetch(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:3000"
+            : process.env.BASE_URL
+        }/api/data`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const { data } = await response.json();
+
+      return {
+        props: {
+          data: data[0],
+          error: null,
+        },
+        revalidate: 1,
+      };
+    } catch (err) {
+      return {
+        props: {
+          data: [],
+          error: err.message,
+        },
+      };
+    }
+  } else {
+    throw new EnvironmentError(
+      "DATA_SOURCE is not defined properly, it must be `internal` or `external`"
+    );
   }
 }
