@@ -14,3 +14,19 @@ al-home-4 {
 al-home-5 {
   @apply absolute w-[436.52px] h-[544.07px] -right-[400px] top-[4000px] lg:left-[1100px] lg:top-[3200px] bg-gradient-to-r from-[#1a2980] to-[#26d0ce] blur-[370px] rounded-[200px] rotate-[47.46deg] z-0;
 }
+
+al-404-1 {
+  @apply fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px];
+}
+
+al-404-2 {
+  @apply fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg];
+}
+
+al-projects-1 {
+  @apply fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px];
+}
+
+al-projects-2 {
+  @apply fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg];
+}

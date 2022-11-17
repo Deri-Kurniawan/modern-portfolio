@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Fragment } from "react";
+import styles from "../styles/404.module.css";
 
 export default function NotFound() {
   const router = useRouter();
@@ -58,21 +59,29 @@ export default function NotFound() {
           </div>
         </div>
 
-        <div className="absolute left-[300px] lg:left-[432px] top-[97px] animate-pulse fof__particle1">
+        <div
+          className={`absolute left-[300px] lg:left-[432px] top-[97px] animate-pulse ${styles.particle1}`}
+        >
           <Image src={blurGradientEllipse} alt="" width="44px" height="44px" />
         </div>
-        <div className="absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] fof__particle2">
+        <div
+          className={`absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] ${styles.particle2}`}
+        >
           <Image src={normalGradientEllipse} alt="" width={78} height={78} />
         </div>
-        <div className="absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse fof__particle3">
+        <div
+          className={`absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse ${styles.particle3}`}
+        >
           <Image src={normalGradientEllipse} alt="" width={44} height={44} />
         </div>
-        <div className="absolute left-[850px] top-[550px] fof__particle4">
+        <div
+          className={`absolute left-[850px] top-[550px] ${styles.particle4}`}
+        >
           <Image src={blurGradientEllipse} alt="" width={56} height={56} />
         </div>
 
-        <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
-        <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
+        <al-404-1 />
+        <al-404-2 />
       </div>
     </Fragment>
   );

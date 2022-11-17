@@ -42,8 +42,8 @@ export default function Offline() {
           </div>
         </div>
 
-        <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
-        <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
+        <al-404-1 />
+        <al-404-2 />
       </div>
     </Fragment>
   );
