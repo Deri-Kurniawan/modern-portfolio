@@ -7,6 +7,11 @@ const Button = ({
   showIcon = true,
   style = "mt-[30px]",
   clickHandle = () => null,
+}: {
+  title: string;
+  showIcon?: boolean;
+  style?: string;
+  clickHandle?: () => void;
 }) => (
   <button
     className={`relative ${style} text-black h-[54px] w-[190px] lg:h-[64px] lg:w-[200px] bg-blue-gradient font-medium text-[15px] lg:text-[18px] rounded-[10px]`}

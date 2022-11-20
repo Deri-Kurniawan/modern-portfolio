@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Contacts = ({ data }) => (
+const Contacts = ({ data }: { data: ContactsProps }) => (
   <section id="contacts" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col-reverse lg:flex-row">
       <div className="flex flex-1 flex-col pt-[30px] lg:pt-0">

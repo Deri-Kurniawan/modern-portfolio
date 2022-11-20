@@ -1,4 +1,4 @@
-import projectsImages from "../assets/images/projects";
+import projectsImages from "./images/projects";
 import arrowRight from "../assets/images/Arrow-Right.png";
 import brand from "../assets/images/Brand-74x74.png";
 import close from "../assets/images/Close.png";

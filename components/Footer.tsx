@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { brand } from "../assets";
 
-const Footer = ({ data }) => (
+const Footer = ({
+  data,
+}: {
+  data: { links: FooterProps; socialMedia: SocialMediaProps };
+}) => (
   <footer className="pt-[80px] lg:pt-[140px]">
     <div className="flex flex-col items-start justify-center w-full mb-8 md:flex-row">
       <div className="flex flex-col items-start justify-start flex-1 mr-10">

@@ -5,6 +5,11 @@ const ModalBox = ({
   width = "w-12/12",
   styles = "",
   children,
+}: {
+  id: string;
+  width: string;
+  styles: string;
+  children: React.ReactNode;
 }) => {
   return (
     <Fragment>

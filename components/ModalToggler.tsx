@@ -2,7 +2,13 @@ import Image from "next/image";
 import React from "react";
 import { arrowRight } from "../assets";
 
-const ModalToggler = ({ id, title = "Show More" }) => {
+const ModalToggler = ({
+  id = "defaultModalId",
+  title = "Show More",
+}: {
+  id: string;
+  title: string;
+}) => {
   return (
     <label
       htmlFor={id}

@@ -2,15 +2,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { brand, close, hamburger } from "../assets";
 
-const Navbar = ({ data }) => {
+const Navbar = ({ data }: { data: NavLinksProps }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [sectionIsInViewId, setSectionIsInViewId] = useState("home");
 
   useEffect(() => {
     // Scroll Spy
-    const sections = document.querySelectorAll("section");
-    const handleScrollSpy = (e, sections) => {
-      sections.forEach((section) => {
+    const handleScrollSpy = (sections: any) => {
+      sections.forEach((section: any) => {
         const offsetY = 200;
         const sectionTop = section.offsetTop - offsetY;
         const sectionHeight = section.offsetHeight;
@@ -26,10 +25,12 @@ const Navbar = ({ data }) => {
       });
     };
 
-    window.addEventListener("scroll", (e) => handleScrollSpy(e, sections));
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => handleScrollSpy(sections));
 
     return () =>
-      window.removeEventListener("scroll", (e) => handleScrollSpy(e, sections));
+      window.removeEventListener("scroll", () => handleScrollSpy(sections));
   }, []);
 
   return (
@@ -54,7 +55,7 @@ const Navbar = ({ data }) => {
           </h1>
         </button>
         <ul className="flex-row items-center justify-end hidden list-none sm:flex">
-          {data.map((nav, index) => (
+          {data.map((nav, index: any) => (
             <li
               key={index}
               className={`${

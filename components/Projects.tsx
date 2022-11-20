@@ -5,13 +5,13 @@ import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import { arrowLeftCircle, arrowRightCircle } from "../assets";
 
-const Projects = ({ data }) => {
+const Projects = ({ data }: { data: ProjectsProps }) => {
   const [indexPosition, setIndexPosition] = useState(0);
-  const [projectData, setProjectData] = useState([]);
+  const [projectData, setProjectData]: any[] = useState([]);
   const router = useRouter();
 
   const handlePrev = () =>
-    setIndexPosition((prev) => {
+    setIndexPosition((prev: any) => {
       const hasDecrementPrev = prev - 1;
 
       if (hasDecrementPrev < 0) {
@@ -111,7 +111,7 @@ const Projects = ({ data }) => {
           </div>
           <Button
             title="See More Project"
-            clickHandle={() => router.push("/projects")}
+            clickHandle={(): any => router.push("/projects")}
           />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, createElement } from "react";
 
 export default function Offline() {
   const router = useRouter();
@@ -37,13 +37,13 @@ export default function Offline() {
             <Button
               showIcon={false}
               title="Go Back Home"
-              clickHandle={() => router.push("/")}
+              clickHandle={(): any => router.push("/")}
             />
           </div>
         </div>
 
-        <al-404-1 />
-        <al-404-2 />
+        {createElement("al-404-1")}
+        {createElement("al-404-2")}
       </div>
     </Fragment>
   );

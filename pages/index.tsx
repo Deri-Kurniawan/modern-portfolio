@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, createElement } from "react";
 import Head from "next/head";
 import {
   Navbar,
@@ -22,9 +22,16 @@ import {
   envIsProduction,
   envSameAs,
 } from "../utils/envHelper";
+import { GetStaticProps } from "next";
 
-export default function Home({ data, error }) {
-  const navbarContainerRef = useRef(null);
+export default function Home({
+  data,
+  error,
+}: {
+  data: DataSchema;
+  error: string | null | Error;
+}) {
+  const navbarContainerRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     AOSInit({
@@ -97,11 +104,12 @@ export default function Home({ data, error }) {
                 socialMedia: data?.socialMedia,
               }}
             />
-            <al-home-1 />
-            <al-home-2 />
-            <al-home-3 />
-            <al-home-4 />
-            <al-home-5 />
+
+            {createElement("al-home-1")}
+            {createElement("al-home-2")}
+            {createElement("al-home-3")}
+            {createElement("al-home-4")}
+            {createElement("al-home-5")}
           </div>
         </div>
       </div>
@@ -109,6 +117,7 @@ export default function Home({ data, error }) {
         id="particle"
         src="/scripts/particles.js-2.0.0/particles.min.js"
         onLoad={() => {
+          // @ts-ignore - particlesJS is a global variable from particles.min.js
           // id element, config particles, callback
           particlesJS.load(
             "particles",
@@ -123,7 +132,7 @@ export default function Home({ data, error }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   if (envIsNotDefined("DATA_SOURCE")) {
     throw new EnvironmentError(
       "DATA_SOURCE is not defined as environtment variable"
@@ -171,7 +180,7 @@ export async function getStaticProps() {
       return {
         props: {
           data: [],
-          error: err.message,
+          error: (err as Error).message,
         },
       };
     }
@@ -180,4 +189,4 @@ export async function getStaticProps() {
       "DATA_SOURCE is not defined properly, it must be `internal` or `external`"
     );
   }
-}
+};

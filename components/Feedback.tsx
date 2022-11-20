@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Feedback = ({ data }) => (
+const Feedback = ({ data }: { data: FeedbacksProps }) => (
   <section id="feedback" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-1">
@@ -12,7 +12,7 @@ const Feedback = ({ data }) => (
       <div className="flex flex-1 lg:items-center pt-[30px] lg:pt-0">
         <p className="text-[18px] text-dimWhite z-10">
           Everything you need to build awesome design, mobile app, and web app,
-          Rest API and more. I’ll do my best for it!
+          Rest API and more. I&apos;ll do my best for it!
         </p>
       </div>
     </div>

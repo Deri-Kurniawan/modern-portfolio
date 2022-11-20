@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { blurGradientEllipse, normalGradientEllipse } from "../../assets";
 import Button from "../../components/Button";
-import { Fragment } from "react";
+import { Fragment, createElement } from "react";
 
 export default function Projects() {
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function Projects() {
                 <Button
                   showIcon={false}
                   title="Let's Begin"
-                  clickHandle={() => router.push("#start")}
+                  clickHandle={(): any => router.push("#start")}
                 />
               </div>
             </section>
@@ -82,8 +82,9 @@ export default function Projects() {
             <div className="absolute left-[850px] top-[550px] fof__particle4">
               <Image src={blurGradientEllipse} alt="" width={56} height={56} />
             </div>
-            <al-projects-1 />
-            <al-Projects-2 />
+
+            {createElement("al-projects-1")}
+            {createElement("al-projects-2")}
           </div>
         </div>
       </div>

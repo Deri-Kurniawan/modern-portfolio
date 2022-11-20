@@ -1,4 +1,4 @@
-const Stats = ({ data }) => (
+const Stats = ({ data }: { data: StatsProps }) => (
   <section id="stats" className="py-[50px] lg:py-[140px]">
     <div className="flex flex-row flex-wrap items-center justify-between">
       {data.map(({ label, value }, index) => (

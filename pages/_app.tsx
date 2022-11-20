@@ -1,11 +1,12 @@
+import { Fragment } from "react";
+import { AppProps } from "next/app";
 import Script from "next/script";
 import NextNProgress from "nextjs-progressbar";
-import { Fragment } from "react";
 import "../styles/globals.css";
 import "../styles/customDOM.css";
 import "aos/dist/aos.css";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <NextNProgress

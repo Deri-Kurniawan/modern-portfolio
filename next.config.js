@@ -18,6 +18,9 @@ const nextConfig = {
       "res.cloudinary.com",
     ],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports =

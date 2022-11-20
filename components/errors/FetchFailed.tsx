@@ -1,14 +1,16 @@
 import Image from "next/image";
-import React from "react";
-import { blurGradientEllipse, normalGradientEllipse } from "../assets";
-import Button from "../components/Button";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import { useEffect } from "react";
+import { blurGradientEllipse, normalGradientEllipse } from "../../assets";
 import { Fragment } from "react";
-import styles from "../styles/404.module.css";
 
-export default function NotFound() {
-  const router = useRouter();
+export default function FetchFailed() {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.clear();
+      return () => clearInterval(interval);
+    }, 1000);
+  }, []);
 
   return (
     <Fragment>
@@ -22,7 +24,7 @@ export default function NotFound() {
           content="https://portfolio.deri-kurniawan.vercel.app/404"
         />
         <meta property="og:site_name" content="404 - Deri Kurniawan" />
-        <title>404 - Deri Kurniawan</title>
+        <title>No Data Available - Deri Kurniawan</title>
       </Head>
       <div className="relative w-screen h-screen overflow-x-hidden text-white bg-primary font-poppins">
         <div className="flex flex-col items-center my-[15vh] lg:my-0 lg:h-full lg:w-full z-50">
@@ -43,45 +45,30 @@ export default function NotFound() {
             </h1>
           </div>
           <h1 className="text-[43px] lg:text-[56px] text-gradient font-bold -translate-y-16 z-50">
-            Page Not Found
+            No Data Available
           </h1>
           <p className="text-[18px] lg:text-[23px] text-center -translate-y-12 z-50">
-            Sorry! the page doesn&apos;t exist or has been
+            Sorry! the page is currently unavailable
             <br />
-            temporarily moved or deleted
+            because failed to get data from the server
           </p>
-          <div className="z-50 -translate-y-12">
-            <Button
-              showIcon={false}
-              title="Go Back Home"
-              clickHandle={() => router.push("/")}
-            />
-          </div>
         </div>
 
-        <div
-          className={`absolute left-[300px] lg:left-[432px] top-[97px] animate-pulse ${styles.particle1}`}
-        >
-          <Image src={blurGradientEllipse} alt="" width="44px" height="44px" />
+        <div className="absolute left-[300px] lg:left-[432px] top-[97px] animate-pulse fof__particle1">
+          <Image src={blurGradientEllipse} alt="" width={44} height={44} />
         </div>
-        <div
-          className={`absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] ${styles.particle2}`}
-        >
+        <div className="absolute left-[20px] lg:left-[1034px] top-[400px] lg:top-[306px] fof__particle2">
           <Image src={normalGradientEllipse} alt="" width={78} height={78} />
         </div>
-        <div
-          className={`absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse ${styles.particle3}`}
-        >
+        <div className="absolute left-[326px] top-[450px] lg:top-[506px] animate-pulse fof__particle3">
           <Image src={normalGradientEllipse} alt="" width={44} height={44} />
         </div>
-        <div
-          className={`absolute left-[850px] top-[550px] ${styles.particle4}`}
-        >
+        <div className="absolute left-[850px] top-[550px] fof__particle4">
           <Image src={blurGradientEllipse} alt="" width={56} height={56} />
         </div>
 
-        <al-404-1 />
-        <al-404-2 />
+        <div className="fixed w-[422px] h-[422px] left-[1068px] -top-[195px] bg-[#d9d9d9] blur-[250px]" />
+        <div className="fixed w-[533px] h-[533px] -left-[93.05px] top-[376px] bg-gradient-to-l from-[#00D9F5] to-[#fff] blur-[400px] rotate-[15deg]" />
       </div>
     </Fragment>
   );

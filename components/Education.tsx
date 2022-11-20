@@ -1,7 +1,7 @@
 import Button from "./Button";
 import parse from "html-react-parser";
 
-const Education = ({ data }) => (
+const Education = ({ data }: { data: EducationsProps }) => (
   <section id="education" className="py-[80px] lg:py-[140px]">
     <div className="flex flex-col lg:flex-row">
       <div className="flex flex-col flex-1">
@@ -18,7 +18,7 @@ const Education = ({ data }) => (
         <div className="hidden lg:block">
           <Button
             title="Show More"
-            clickHandle={() =>
+            clickHandle={(): any =>
               window.open(
                 "https://www.linkedin.com/in/deri-kurniawan/",
                 "_blank"
@@ -77,7 +77,7 @@ const Education = ({ data }) => (
       <div className="block lg:hidden">
         <Button
           title="Show More"
-          clickHandle={() =>
+          clickHandle={(): any =>
             window.open("https://www.linkedin.com/in/deri-kurniawan/", "_blank")
           }
         />

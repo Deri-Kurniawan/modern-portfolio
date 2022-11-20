@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Hero = ({ data }) => (
+const Hero = ({ data }: { data: HeroProps }) => (
   <section
     id="home"
     className="pt-[90px] pb-[80px] ss:pt-[100px] ss:pb-[90px] lg:pt-[150px] lg:pb-[140px]"
@@ -41,7 +41,6 @@ const Hero = ({ data }) => (
             width={421}
             height={426}
             priority={true}
-            unoptimized={true}
           />
         </div>
       </div>
