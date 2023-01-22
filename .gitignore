@@ -40,3 +40,7 @@ next-env.d.ts
 /public/sw*.js
 /public/workbox-*.js
 /public/fallback*.js
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
