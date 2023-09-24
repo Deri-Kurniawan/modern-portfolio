@@ -20,7 +20,7 @@ export default function Projects() {
         <meta property="og:image" content="/Mockup.png" />
         <meta
           property="og:url"
-          content="https://portfolio.deri-kurniawan.vercel.app/projects"
+          content="https://modern-portfolio.deri.my.id/projects"
         />
         <meta property="og:site_name" content="Project - Deri Kurniawan" />
         <title>Projects - Deri Kurniawan</title>

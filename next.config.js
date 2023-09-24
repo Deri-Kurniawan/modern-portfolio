@@ -6,7 +6,7 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
   env: {
     BASE_URL_DEV: "http://localhost:3000",
-    BASE_URL_PROD: "https://portfolio.deri-kurniawan.vercel.app",
+    BASE_URL_PROD: "https://modern-portfolio.deri.my.id",
   },
   reactStrictMode: true,
   swcMinify: true,

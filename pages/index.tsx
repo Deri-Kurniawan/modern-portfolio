@@ -71,10 +71,7 @@ export default function Home({
           content="About Deri Kurniawan Personality, Skills, Education, Projects and Feedback"
         />
         <meta property="og:image" content="/Mockup.png" />
-        <meta
-          property="og:url"
-          content="https://portfolio.deri-kurniawan.vercel.app"
-        />
+        <meta property="og:url" content="https://modern-portfolio.deri.my.id" />
         <meta property="og:site_name" content="Deri Kurniawan Portfolio" />
         <title>Home - Deri Kurniawan</title>
       </Head>

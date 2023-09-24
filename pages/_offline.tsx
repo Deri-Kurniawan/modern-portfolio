@@ -15,7 +15,7 @@ export default function Offline() {
         <meta property="og:image" content="/Mockup.png" />
         <meta
           property="og:url"
-          content="https://portfolio.deri-kurniawan.vercel.app/offline"
+          content="https://modern-portfolio.deri.my.id/offline"
         />
         <meta property="og:site_name" content="No Internet - Deri Kurniawan" />
         <title>No Internet - Deri Kurniawan</title>

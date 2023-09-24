@@ -19,7 +19,7 @@ export default function NotFound() {
         <meta property="og:image" content="/Mockup.png" />
         <meta
           property="og:url"
-          content="https://portfolio.deri-kurniawan.vercel.app/404"
+          content="https://modern-portfolio.deri.my.id/404"
         />
         <meta property="og:site_name" content="404 - Deri Kurniawan" />
         <title>404 - Deri Kurniawan</title>
