@@ -11,7 +11,7 @@ Live Demo [Modern Portfolio App](https://modern-portfolio.deri.my.id) Deployed a
 
 # Documentation
 
-Visit [Modern Portfolio Documentation](https://docs.modern-portfolio.deri.my.id) If you want to make your portfolio with this template
+Visit [Modern Portfolio Documentation](https://docs-modern-portfolio.deri-kurniawan.vercel.app/) If you want to make your portfolio with this template
 
 # Credits
 
