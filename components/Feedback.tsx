@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const Feedback = ({ data }: { data: FeedbacksProps }) => (
   <section id="feedback" className="py-[80px] lg:py-[140px]">
@@ -16,7 +15,7 @@ const Feedback = ({ data }: { data: FeedbacksProps }) => (
         </p>
       </div>
     </div>
-    <div className="flex flex-col lg:flex-row mt-[30px] lg:mt-6">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-[30px] lg:mt-6 gap-6">
       {data.map(({ avatar, name, position, review }, index) => (
         <div
           key={index}
