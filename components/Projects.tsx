@@ -69,7 +69,7 @@ const Projects = ({ data }: { data: ProjectsProps }) => {
                 className="z-10 object-contain"
                 src={
                   projectData?.image ||
-                  "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663606820/Deri%20Kurniawan%20Portfolio%20Web%20App/projects/Project-1_iynwb0.png"
+                  "https://res.cloudinary.com/deri-kurniawan/image/upload/v1663606820/Github/modern-portfolio/projects/Project-1_iynwb0.png"
                 }
                 alt={`project_image_${indexPosition + 1}`}
                 width={624}
@@ -109,10 +109,10 @@ const Projects = ({ data }: { data: ProjectsProps }) => {
           <div className="text-[18px] text-dimWhite mt-6">
             {parse(projectData?.description || "")}
           </div>
-          <Button
+          {/* <Button
             title="See More Project"
             clickHandle={(): any => router.push("/projects")}
-          />
+          /> */}
         </div>
       </div>
     </section>
