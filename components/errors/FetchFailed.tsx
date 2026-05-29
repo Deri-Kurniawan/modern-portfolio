@@ -21,7 +21,7 @@ export default function FetchFailed() {
         <meta property="og:image" content="/Mockup.png" />
         <meta
           property="og:url"
-          content="https://modern-portfolio.deri.my.id/404"
+          content="https://modern-portfolio.derikn.com/404"
         />
         <meta property="og:site_name" content="404 - Deri Kurniawan" />
         <title>No Data Available - Deri Kurniawan</title>
